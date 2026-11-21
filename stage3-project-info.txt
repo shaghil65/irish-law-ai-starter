@@ -1,0 +1,84 @@
+=== DOCUMENTS TABLE ===
+                                                            Table "public.legislation_documents"
+      Column      |           Type           | Collation | Nullable |                                        Default                                        
+------------------+--------------------------+-----------+----------+---------------------------------------------------------------------------------------
+ id               | bigint                   |           | not null | nextval('legislation_documents_id_seq'::regclass)
+ canonical_uri    | text                     |           | not null | 
+ title            | text                     |           | not null | 
+ act_year         | integer                  |           | not null | 
+ act_number       | integer                  |           | not null | 
+ legislation_type | text                     |           | not null | 'act'::text
+ source_version   | text                     |           | not null | 'enacted'::text
+ source_url       | text                     |           | not null | 
+ language         | text                     |           | not null | 'en'::text
+ sha256           | character(64)            |           | not null | 
+ raw_path         | text                     |           | not null | 
+ attribution      | text                     |           | not null | 'eISB / Houses of the Oireachtas; Oireachtas Open Data PSI Licence (CC BY 4.0)'::text
+ imported_at      | timestamp with time zone |           | not null | now()
+Indexes:
+    "legislation_documents_pkey" PRIMARY KEY, btree (id)
+    "legislation_documents_act_year_act_number_source_version_la_key" UNIQUE CONSTRAINT, btree (act_year, act_number, source_version, language)
+    "legislation_documents_canonical_uri_key" UNIQUE CONSTRAINT, btree (canonical_uri)
+Referenced by:
+    TABLE "legislation_provisions" CONSTRAINT "legislation_provisions_document_id_fkey" FOREIGN KEY (document_id) REFERENCES legislation_documents(id) ON DELETE CASCADE
+
+=== PROVISIONS TABLE ===
+                                                                    Table "public.legislation_provisions"
+      Column      |   Type   | Collation | Nullable |                                                         Default                                                         
+------------------+----------+-----------+----------+-------------------------------------------------------------------------------------------------------------------------
+ id               | bigint   |           | not null | nextval('legislation_provisions_id_seq'::regclass)
+ document_id      | bigint   |           | not null | 
+ provision_key    | text     |           | not null | 
+ kind             | text     |           | not null | 
+ provision_number | text     |           |          | 
+ heading          | text     |           |          | 
+ body_text        | text     |           | not null | 
+ parent_key       | text     |           |          | 
+ position         | integer  |           | not null | 
+ structural_path  | text     |           | not null | 
+ search_vector    | tsvector |           |          | generated always as (to_tsvector('english'::regconfig, (COALESCE(heading, ''::text) || ' '::text) || body_text)) stored
+Indexes:
+    "legislation_provisions_pkey" PRIMARY KEY, btree (id)
+    "legislation_provisions_doc_idx" btree (document_id)
+    "legislation_provisions_document_id_provision_key_key" UNIQUE CONSTRAINT, btree (document_id, provision_key)
+    "legislation_provisions_search_idx" gin (search_vector)
+Foreign-key constraints:
+    "legislation_provisions_document_id_fkey" FOREIGN KEY (document_id) REFERENCES legislation_documents(id) ON DELETE CASCADE
+
+=== BACKEND FILES ===
+backend/Dockerfile
+backend/app/__init__.py
+backend/app/main.py
+backend/ingest.backup/__init__.py
+backend/ingest.backup/cli.py
+backend/ingest.backup/downloader.py
+backend/ingest.backup/importer.py
+backend/ingest.backup/parser.py
+backend/ingest.backup/parser.py.backup
+backend/ingest.backup/schema.sql
+backend/ingest.before-stage25/__init__.py
+backend/ingest.before-stage25/cli.py
+backend/ingest.before-stage25/downloader.py
+backend/ingest.before-stage25/importer.py
+backend/ingest.before-stage25/parser.py
+backend/ingest.before-stage25/parser.py.backup
+backend/ingest.before-stage25/schema.sql
+backend/ingest/__init__.py
+backend/ingest/audit.py
+backend/ingest/cli.py
+backend/ingest/downloader.py
+backend/ingest/importer.py
+backend/ingest/parser.py
+backend/ingest/parser.py.backup
+backend/ingest/schema.sql
+backend/requirements.txt
+backend/tests/test_ingest.py
+=== FRONTEND FILES ===
+frontend/Dockerfile
+frontend/app/globals.css
+frontend/app/layout.tsx
+frontend/app/page.tsx
+frontend/next-env.d.ts
+frontend/next.config.ts
+frontend/package.json
+frontend/tsconfig.json

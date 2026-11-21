@@ -1,0 +1,892 @@
+{
+  "files": 49,
+  "valid": 49,
+  "invalid": 0,
+  "total_provisions": 3496,
+  "records": [
+    {
+      "file": "/data/raw/acts/2017/act-8.xml",
+      "status": "valid",
+      "title": "COURTS ACT 2017",
+      "year": 2017,
+      "number": 8,
+      "sha256": "f2c2d0563f06670eb7c7b8088f9b98baf2f9743dca73f8606e43da893f8b1b5c",
+      "source_units": {
+        "sect": 4
+      },
+      "parsed_units": {
+        "sect": 4
+      },
+      "extracted": 4,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-1.xml",
+      "status": "valid",
+      "title": "POLICING, SECURITY AND COMMUNITY SAFETY ACT 2024",
+      "year": 2024,
+      "number": 1,
+      "sha256": "98af5765c52b850e6d33ae8051b02a9f4e582dab93212c609e7e51df9acff304",
+      "source_units": {
+        "part": 10,
+        "sect": 302,
+        "chapter": 30
+      },
+      "parsed_units": {
+        "part": 10,
+        "sect": 302,
+        "chapter": 30
+      },
+      "extracted": 342,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-10.xml",
+      "status": "valid",
+      "title": "ROAD TRAFFIC ACT 2024",
+      "year": 2024,
+      "number": 10,
+      "sha256": "01c3216ea601d9a69d82b094d4cfce5057119ff3ced47ae1478429825a3c3b96",
+      "source_units": {
+        "part": 5,
+        "sect": 22
+      },
+      "parsed_units": {
+        "part": 5,
+        "sect": 22
+      },
+      "extracted": 27,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-11.xml",
+      "status": "valid",
+      "title": "GAS (AMENDMENT) AND MISCELLANEOUS PROVISIONS ACT 2024",
+      "year": 2024,
+      "number": 11,
+      "sha256": "2680da44d78731d2d2f653d9c06186805670890b9df0699f4b49ea46e15fc9eb",
+      "source_units": {
+        "part": 4,
+        "sect": 35,
+        "chapter": 2
+      },
+      "parsed_units": {
+        "part": 4,
+        "sect": 35,
+        "chapter": 2
+      },
+      "extracted": 41,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-12.xml",
+      "status": "valid",
+      "title": "COURT PROCEEDINGS (DELAYS) ACT 2024",
+      "year": 2024,
+      "number": 12,
+      "sha256": "8f3208174effd27fae96e4e708f938e85e528d3501863d1361a3611c8cf6ea8c",
+      "source_units": {
+        "part": 6,
+        "sect": 37
+      },
+      "parsed_units": {
+        "part": 6,
+        "sect": 37
+      },
+      "extracted": 43,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-13.xml",
+      "status": "valid",
+      "title": "HEALTH (TERMINATION OF PREGNANCY SERVICES) (SAFE ACCESS ZONES) ACT 2024",
+      "year": 2024,
+      "number": 13,
+      "sha256": "d2ab670cc062b5727313db3f3d129c4f8666c9e796427e321dbf360f80f14d05",
+      "source_units": {
+        "sect": 8
+      },
+      "parsed_units": {
+        "sect": 8
+      },
+      "extracted": 8,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-14.xml",
+      "status": "valid",
+      "title": "EMPLOYMENT (COLLECTIVE REDUNDANCIES AND MISCELLANEOUS PROVISIONS) AND COMPANIES (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 14,
+      "sha256": "d69c89eab3fbc558399dc93620f36e0ebf07eb75630e730f70ff4ce1fa8e805e",
+      "source_units": {
+        "part": 4,
+        "sect": 27
+      },
+      "parsed_units": {
+        "part": 4,
+        "sect": 27
+      },
+      "extracted": 31,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-15.xml",
+      "status": "valid",
+      "title": "RESEARCH AND INNOVATION ACT 2024",
+      "year": 2024,
+      "number": 15,
+      "sha256": "ecce49d3b0a8f4edbc8cec81a618f7fd7f78ced4f5e13876b09eba8fded9f7dd",
+      "source_units": {
+        "part": 5,
+        "sect": 72,
+        "chapter": 7
+      },
+      "parsed_units": {
+        "part": 5,
+        "sect": 72,
+        "chapter": 7
+      },
+      "extracted": 84,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-16.xml",
+      "status": "valid",
+      "title": "FUTURE IRELAND FUND AND INFRASTRUCTURE, CLIMATE AND NATURE FUND ACT 2024",
+      "year": 2024,
+      "number": 16,
+      "sha256": "75bc802cb00aad725744488f7d3c4f417b5f701e12ef86b38dbdd13689e36829",
+      "source_units": {
+        "part": 6,
+        "sect": 37
+      },
+      "parsed_units": {
+        "part": 6,
+        "sect": 37
+      },
+      "extracted": 43,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-17.xml",
+      "status": "valid",
+      "title": "EMPLOYMENT PERMITS ACT 2024",
+      "year": 2024,
+      "number": 17,
+      "sha256": "343b0b362c26f2a05b9383ee7a82c0eb0f1c72f8548398cb4c0d3b1255fb11ea",
+      "source_units": {
+        "part": 7,
+        "sect": 78,
+        "chapter": 9
+      },
+      "parsed_units": {
+        "part": 7,
+        "sect": 78,
+        "chapter": 9
+      },
+      "extracted": 94,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-18.xml",
+      "status": "valid",
+      "title": "HEALTH (ASSISTED HUMAN REPRODUCTION) ACT 2024",
+      "year": 2024,
+      "number": 18,
+      "sha256": "fba943041de1a6ed5c1a36ed48a890b695ed83b45dcae5bfadc0549d43bdd57e",
+      "source_units": {
+        "part": 13,
+        "sect": 234,
+        "chapter": 28
+      },
+      "parsed_units": {
+        "part": 13,
+        "sect": 234,
+        "chapter": 28
+      },
+      "extracted": 275,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-19.xml",
+      "status": "valid",
+      "title": "CHILD CARE (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 19,
+      "sha256": "e63337858377c41090336ef69e4329769ed6bad472f77774a50bd48724f1facc",
+      "source_units": {
+        "sect": 23
+      },
+      "parsed_units": {
+        "sect": 23
+      },
+      "extracted": 23,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-2.xml",
+      "status": "valid",
+      "title": "DIGITAL SERVICES ACT 2024",
+      "year": 2024,
+      "number": 2,
+      "sha256": "f54fea1199471a3f33f2441c2937a3e1324672d1e22606152287b68f9f7e514d",
+      "source_units": {
+        "part": 4,
+        "sect": 84,
+        "chapter": 10
+      },
+      "parsed_units": {
+        "part": 4,
+        "sect": 84,
+        "chapter": 10
+      },
+      "extracted": 98,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-20.xml",
+      "status": "valid",
+      "title": "AUTOMATIC ENROLMENT RETIREMENT SAVINGS SYSTEM ACT 2024",
+      "year": 2024,
+      "number": 20,
+      "sha256": "aa182b2936f6a12f9ff50add6d80a132e3d80f4aa3cf6fccedc2c41d923dea85",
+      "source_units": {
+        "part": 9,
+        "sect": 141,
+        "chapter": 19
+      },
+      "parsed_units": {
+        "part": 9,
+        "sect": 141,
+        "chapter": 19
+      },
+      "extracted": 169,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-21.xml",
+      "status": "valid",
+      "title": "CHARITIES (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 21,
+      "sha256": "9a4f74d3d3d173fae3aa9217811db67ed9a7850243664616da30182478b2e2b0",
+      "source_units": {
+        "part": 3,
+        "sect": 40
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 40
+      },
+      "extracted": 43,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-22.xml",
+      "status": "valid",
+      "title": "RESIDENTIAL TENANCIES (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 22,
+      "sha256": "d73476b3d5dd48fcd30b10bcaf954d6f1f7534324bb06ba89035032f9a8d99bb",
+      "source_units": {
+        "sect": 7
+      },
+      "parsed_units": {
+        "sect": 7
+      },
+      "extracted": 7,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-23.xml",
+      "status": "valid",
+      "title": "HEALTH (MISCELLANEOUS PROVISIONS) ACT 2024",
+      "year": 2024,
+      "number": 23,
+      "sha256": "7c5d00d610e5bcff070ecca980425aa71fd0b7785b7a4ba9e2fa91cc09da70dd",
+      "source_units": {
+        "part": 6,
+        "sect": 13
+      },
+      "parsed_units": {
+        "part": 6,
+        "sect": 13
+      },
+      "extracted": 19,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-24.xml",
+      "status": "valid",
+      "title": "SOCIAL WELFARE (MISCELLANEOUS PROVISIONS) ACT 2024",
+      "year": 2024,
+      "number": 24,
+      "sha256": "f275e60d3b5516f12a126c4ec1130fbb25b706a1b3902cfddab6e4960f8f80c2",
+      "source_units": {
+        "part": 4,
+        "sect": 17
+      },
+      "parsed_units": {
+        "part": 4,
+        "sect": 17
+      },
+      "extracted": 21,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-25.xml",
+      "status": "valid",
+      "title": "DEFENCE (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 25,
+      "sha256": "67e46acbba621ce083b7289f99bfbec25953d70699e752365f5797fd458f3380",
+      "source_units": {
+        "part": 3,
+        "sect": 25
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 25
+      },
+      "extracted": 28,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-26.xml",
+      "status": "valid",
+      "title": "DIGITAL SERVICES (LEVY) ACT 2024",
+      "year": 2024,
+      "number": 26,
+      "sha256": "12cab938548485f8140279bac427d878cd0435ad10059a6f3627977540f945d5",
+      "source_units": {
+        "part": 3,
+        "sect": 6
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 6
+      },
+      "extracted": 9,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-27.xml",
+      "status": "valid",
+      "title": "CIVIL REGISTRATION (ELECTRONIC REGISTRATION) ACT 2024",
+      "year": 2024,
+      "number": 27,
+      "sha256": "175d17ecc22972d70f9c0cbca11de7f3ead7b427bc09f214493cbda9671b13ed",
+      "source_units": {
+        "part": 5,
+        "sect": 25
+      },
+      "parsed_units": {
+        "part": 5,
+        "sect": 25
+      },
+      "extracted": 30,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-28.xml",
+      "status": "valid",
+      "title": "CRIMINAL LAW (SEXUAL OFFENCES AND HUMAN TRAFFICKING) ACT 2024",
+      "year": 2024,
+      "number": 28,
+      "sha256": "03cf574de55d7665f6a60909f4289bfca387d22896d303ee26dfa336b6f711a8",
+      "source_units": {
+        "part": 5,
+        "sect": 40,
+        "chapter": 11
+      },
+      "parsed_units": {
+        "part": 5,
+        "sect": 40,
+        "chapter": 11
+      },
+      "extracted": 56,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-29.xml",
+      "status": "valid",
+      "title": "HEALTH (MISCELLANEOUS PROVISIONS) (NO. 2) ACT 2024",
+      "year": 2024,
+      "number": 29,
+      "sha256": "e9f9a93b4e4814fa78a31f97eaef13b6535d0b9c78e998baaf210c2881d22a6c",
+      "source_units": {
+        "part": 4,
+        "sect": 34
+      },
+      "parsed_units": {
+        "part": 4,
+        "sect": 34
+      },
+      "extracted": 38,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-3.xml",
+      "status": "valid",
+      "title": "FINANCE (STATE GUARANTEES, INTERNATIONAL FINANCIAL INSTITUTION FUNDS AND MISCELLANEOUS PROVISIONS) ACT 2024",
+      "year": 2024,
+      "number": 3,
+      "sha256": "3bc5b5ac518b5ea7e0b8bebf1e31c286ca2e5fbcadb9f822963738ffe0f7ccc2",
+      "source_units": {
+        "part": 7,
+        "sect": 22
+      },
+      "parsed_units": {
+        "part": 7,
+        "sect": 22
+      },
+      "extracted": 29,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-30.xml",
+      "status": "valid",
+      "title": "COURTS, CIVIL LAW, CRIMINAL LAW AND SUPERANNUATION (MISCELLANEOUS PROVISIONS) ACT 2024",
+      "year": 2024,
+      "number": 30,
+      "sha256": "3174cb31d9560baa166d45a781d7eeb04f877a2bdc38ef6d4957f0077e76353e",
+      "source_units": {
+        "part": 11,
+        "sect": 31
+      },
+      "parsed_units": {
+        "part": 11,
+        "sect": 31
+      },
+      "extracted": 42,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-31.xml",
+      "status": "valid",
+      "title": "CRIMINAL JUSTICE (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 31,
+      "sha256": "ba6f574b05e4626e37177956fb143ff270bddf2b687f7dfb6a23e816554e5f1e",
+      "source_units": {
+        "sect": 5
+      },
+      "parsed_units": {
+        "sect": 5
+      },
+      "extracted": 5,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-32.xml",
+      "status": "valid",
+      "title": "Motor Insurance Insolvency Compensation Act 2024",
+      "year": 2024,
+      "number": 32,
+      "sha256": "eb6a894a55de8befcbda326e3110184d26b99c4d750ecc5c01912128e82c6d89",
+      "source_units": {
+        "part": 5,
+        "sect": 35
+      },
+      "parsed_units": {
+        "part": 5,
+        "sect": 35
+      },
+      "extracted": 40,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-33.xml",
+      "status": "valid",
+      "title": "ELECTRICITY COSTS (EMERGENCY MEASURES) DOMESTIC ACCOUNTS ACT 2024",
+      "year": 2024,
+      "number": 33,
+      "sha256": "86306ca93382c68bfccb945c387b900a282ed113cf7505d21f4cbf6a4717b7bb",
+      "source_units": {
+        "sect": 14
+      },
+      "parsed_units": {
+        "sect": 14
+      },
+      "extracted": 14,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-34.xml",
+      "status": "valid",
+      "title": "PLANNING AND DEVELOPMENT ACT 2024",
+      "year": 2024,
+      "number": 34,
+      "sha256": "7bef335630150591ae0a5c2fbe33e02b023f20f76f36aa8efb05828582890d76",
+      "source_units": {
+        "part": 26,
+        "sect": 637,
+        "chapter": 57
+      },
+      "parsed_units": {
+        "part": 26,
+        "sect": 637,
+        "chapter": 57
+      },
+      "extracted": 720,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-35.xml",
+      "status": "valid",
+      "title": "GAMBLING REGULATION ACT 2024",
+      "year": 2024,
+      "number": 35,
+      "sha256": "b02cc1c316ff2547c6b337aecdabd34b51a9bf71144f6f196504e873f63df359",
+      "source_units": {
+        "part": 10,
+        "sect": 271,
+        "chapter": 37
+      },
+      "parsed_units": {
+        "part": 10,
+        "sect": 271,
+        "chapter": 37
+      },
+      "extracted": 318,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-36.xml",
+      "status": "valid",
+      "title": "SOCIAL WELFARE ACT 2024",
+      "year": 2024,
+      "number": 36,
+      "sha256": "747cc26c143023ccd8d42077c55c26e690626d513b791717b7e46056cbc3bf5d",
+      "source_units": {
+        "sect": 19
+      },
+      "parsed_units": {
+        "sect": 19
+      },
+      "extracted": 19,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-37.xml",
+      "status": "valid",
+      "title": "MATERNITY PROTECTION, EMPLOYMENT EQUALITY AND PRESERVATION OF CERTAIN RECORDS ACT 2024",
+      "year": 2024,
+      "number": 37,
+      "sha256": "97bb3f7771fd186d77ff8b56ae3f794323ca5e8d09b3a7ac64f91036a0772977",
+      "source_units": {
+        "part": 3,
+        "sect": 12
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 12
+      },
+      "extracted": 15,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-38.xml",
+      "status": "valid",
+      "title": "AGRICULTURE APPEALS (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 38,
+      "sha256": "b77d1cfb019a10202abb5624f1094ec481eb5037f05cee7dec28dc6f13a31b6d",
+      "source_units": {
+        "part": 3,
+        "sect": 16
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 16
+      },
+      "extracted": 19,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-39.xml",
+      "status": "valid",
+      "title": "HOUSING (MISCELLANEOUS PROVISIONS) ACT 2024",
+      "year": 2024,
+      "number": 39,
+      "sha256": "bbe8dc00043a40b94baa312ce366fd521cd77271054cd63cb5305b8f38ed6f22",
+      "source_units": {
+        "part": 4,
+        "sect": 17
+      },
+      "parsed_units": {
+        "part": 4,
+        "sect": 17
+      },
+      "extracted": 21,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-4.xml",
+      "status": "valid",
+      "title": "CORONERS (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 4,
+      "sha256": "ef4108eb0f88d32d135d17512563a3d923e8c774fce06aa17f1dee3b8c35bc14",
+      "source_units": {
+        "sect": 12
+      },
+      "parsed_units": {
+        "sect": 12
+      },
+      "extracted": 12,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-40.xml",
+      "status": "valid",
+      "title": "SEANAD ELECTORAL (UNIVERSITY MEMBERS) (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 40,
+      "sha256": "c52a6e4948ce30a87a1e76fcc19fd60b95fe19a5859a047b04e52d29765a7a7c",
+      "source_units": {
+        "part": 7,
+        "sect": 46
+      },
+      "parsed_units": {
+        "part": 7,
+        "sect": 46
+      },
+      "extracted": 53,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-41.xml",
+      "status": "valid",
+      "title": "CRIMINAL JUSTICE (HATE OFFENCES) ACT 2024",
+      "year": 2024,
+      "number": 41,
+      "sha256": "28d4d96d893824786e83a1224bf0cb350e726429356bfe9f3b79a6c88f7ad2f3",
+      "source_units": {
+        "part": 3,
+        "sect": 24
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 24
+      },
+      "extracted": 27,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-42.xml",
+      "status": "valid",
+      "title": "HEALTH INSURANCE (AMENDMENT) AND HEALTH (PROVISION OF MENOPAUSE PRODUCTS) ACT 2024",
+      "year": 2024,
+      "number": 42,
+      "sha256": "077d85c7becb62afbc5e3fa0c785e6612a1c14f93950829962fd5e39fb4fc770",
+      "source_units": {
+        "part": 3,
+        "sect": 10
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 10
+      },
+      "extracted": 13,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-43.xml",
+      "status": "valid",
+      "title": "FINANCE ACT 2024",
+      "year": 2024,
+      "number": 43,
+      "sha256": "8572e3ebc56eae0a8454df8b06de35e953ba5a2ab939acc5fc73e632d8ea0751",
+      "source_units": {
+        "part": 6,
+        "chapter": 8,
+        "sect": 118
+      },
+      "parsed_units": {
+        "part": 6,
+        "chapter": 8,
+        "sect": 118
+      },
+      "extracted": 132,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-44.xml",
+      "status": "valid",
+      "title": "COMPANIES (CORPORATE GOVERNANCE, ENFORCEMENT AND REGULATORY PROVISIONS) ACT 2024",
+      "year": 2024,
+      "number": 44,
+      "sha256": "9bb4756e019422713b29b9831cb50247d3d3bc6b37b81247a39e52a473c3ccd6",
+      "source_units": {
+        "part": 3,
+        "sect": 90
+      },
+      "parsed_units": {
+        "part": 3,
+        "sect": 90
+      },
+      "extracted": 93,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-45.xml",
+      "status": "valid",
+      "title": "APPROPRIATION ACT 2024",
+      "year": 2024,
+      "number": 45,
+      "sha256": "951fde46df5b157531651af7ea70ad967a3429806ef500339b08e29f9c22c553",
+      "source_units": {
+        "sect": 4
+      },
+      "parsed_units": {
+        "sect": 4
+      },
+      "extracted": 4,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-46.xml",
+      "status": "valid",
+      "title": "HOUSES OF THE OIREACHTAS COMMISSION (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 46,
+      "sha256": "a20eb35e0ffce0b1e87687397d4c35ebf7693dbce33ab9120d11b6fa93fe4be8",
+      "source_units": {
+        "sect": 2
+      },
+      "parsed_units": {
+        "sect": 2
+      },
+      "extracted": 2,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-47.xml",
+      "status": "valid",
+      "title": "Public Health (Tobacco) (Amendment) Act 2024",
+      "year": 2024,
+      "number": 47,
+      "sha256": "f8a3158bbcb1c0b9a9958b6ebf5e1b89f23d67a45f35d13527cd34e265a7d30a",
+      "source_units": {
+        "sect": 11
+      },
+      "parsed_units": {
+        "sect": 11
+      },
+      "extracted": 11,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-48.xml",
+      "status": "valid",
+      "title": "FAMILY COURTS ACT 2024",
+      "year": 2024,
+      "number": 48,
+      "sha256": "13e3d59744b989e53195017eca94475d879de23c057622b847fdf92a09412c7e",
+      "source_units": {
+        "part": 10,
+        "sect": 104,
+        "chapter": 4
+      },
+      "parsed_units": {
+        "part": 10,
+        "sect": 104,
+        "chapter": 4
+      },
+      "extracted": 118,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-5.xml",
+      "status": "valid",
+      "title": "HUMAN TISSUE (TRANSPLANTATION, POST-MORTEM, ANATOMICAL EXAMINATION AND PUBLIC DISPLAY) ACT 2024",
+      "year": 2024,
+      "number": 5,
+      "sha256": "17ecae2e5115641f8ef6aef44dde3e9e04d69ef2a8f6a1c1d39cb7aed903926a",
+      "source_units": {
+        "part": 6,
+        "sect": 110,
+        "chapter": 9
+      },
+      "parsed_units": {
+        "part": 6,
+        "sect": 110,
+        "chapter": 9
+      },
+      "extracted": 125,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-6.xml",
+      "status": "valid",
+      "title": "SOCIAL WELFARE AND CIVIL LAW (MISCELLANEOUS PROVISIONS) ACT 2024",
+      "year": 2024,
+      "number": 6,
+      "sha256": "d53154fb8c9669c41df38cea92b84ce95770668be3253b5526b3b258eaaae6aa",
+      "source_units": {
+        "part": 4,
+        "sect": 11,
+        "chapter": 2
+      },
+      "parsed_units": {
+        "part": 4,
+        "sect": 11,
+        "chapter": 2
+      },
+      "extracted": 17,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-7.xml",
+      "status": "valid",
+      "title": "LOCAL GOVERNMENT (MAYOR OF LIMERICK) AND MISCELLANEOUS PROVISIONS ACT 2024",
+      "year": 2024,
+      "number": 7,
+      "sha256": "f4aafa9bb4b0cfb6659bf02a9a1235f396a3cfbc5e5ae7cb0ba887eb8bd9ee66",
+      "source_units": {
+        "part": 8,
+        "sect": 69
+      },
+      "parsed_units": {
+        "part": 8,
+        "sect": 69
+      },
+      "extracted": 77,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-8.xml",
+      "status": "valid",
+      "title": "CRIMINAL JUSTICE (ENGAGEMENT OF CHILDREN IN CRIMINAL ACTIVITY) ACT 2024",
+      "year": 2024,
+      "number": 8,
+      "sha256": "f7937775ae1ae2385924d2ab8c5d7b30d613324865cffa2a7e375b68acdd7de2",
+      "source_units": {
+        "sect": 5
+      },
+      "parsed_units": {
+        "sect": 5
+      },
+      "extracted": 5,
+      "warning": null
+    },
+    {
+      "file": "/data/raw/acts/2024/act-9.xml",
+      "status": "valid",
+      "title": "EUROPEAN ARREST WARRANT (AMENDMENT) ACT 2024",
+      "year": 2024,
+      "number": 9,
+      "sha256": "05f0fb10b1d256e4b4360d83515d04a8027580c48dfa8c038392fba808213ad0",
+      "source_units": {
+        "sect": 32
+      },
+      "parsed_units": {
+        "sect": 32
+      },
+      "extracted": 32,
+      "warning": null
+    }
+  ]
+}

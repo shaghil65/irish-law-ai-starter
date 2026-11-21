@@ -1,4 +1,4 @@
-"""Run with python -m ingest.cli download|import|all."""
+"""Run with python -m ingest.cli download|import|all|audit."""
 import argparse
 import json
 import logging
@@ -6,12 +6,12 @@ import os
 from pathlib import Path
 from .downloader import run
 from .importer import import_directory
-
+from .audit import audit_directory
 
 def main():
     p = argparse.ArgumentParser(description="Irish Statute Book enacted Acts importer")
     sub = p.add_subparsers(dest="command", required=True)
-    for name in ("download", "import", "all"):
+    for name in ("download", "import", "all", "audit"):
         s = sub.add_parser(name)
         s.add_argument("--start-year", type=int, default=2024)
         s.add_argument("--end-year", type=int, default=2024)
@@ -27,12 +27,13 @@ def main():
     if a.command in ("download", "all"):
         print(json.dumps(run(raw, a.data_dir / "reports" / "downloads.jsonl", a.start_year,
                              a.end_year, a.max_number, a.delay, a.refresh, a.manifest), indent=2))
+    if a.command in ("audit", "all"):
+        print(json.dumps(audit_directory(raw, a.data_dir / "reports" / "audit.json"), indent=2))
     if a.command in ("import", "all"):
         dsn = os.environ.get("DATABASE_URL")
         if not dsn:
             p.error("DATABASE_URL is required for import")
         print(json.dumps(import_directory(raw, dsn, a.strict), indent=2))
-
 
 if __name__ == "__main__":
     main()
