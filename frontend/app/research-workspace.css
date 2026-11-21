@@ -1,0 +1,507 @@
+
+.researchWorkspace {
+  width: 100%;
+  max-width: 1440px;
+  margin: 64px auto 0;
+}
+
+.researchWorkspaceHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.researchWorkspaceHeading h2 {
+  margin: 8px 0;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -.045em;
+}
+
+.researchWorkspaceHeading p {
+  color: #778392;
+  margin: 0;
+  font-size: 14px;
+}
+
+.researchWorkspaceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.researchAnalysis {
+  min-width: 0;
+  margin: 0;
+}
+
+.researchAnswerText {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.85;
+  font-size: 15px;
+}
+
+.researchCitation {
+  display: inline-flex;
+  margin: 0 3px;
+  padding: 0 6px;
+  border-radius: 5px;
+  background: rgba(43, 105, 183, .12);
+  color: #3678c8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.researchCitation:hover {
+  background: rgba(43, 105, 183, .22);
+}
+
+.researchSources {
+  min-width: 0;
+  border: 1px solid rgba(130, 145, 160, .2);
+  border-radius: 18px;
+  padding: 20px;
+  background: var(--research-panel, #fff);
+}
+
+.researchSourcesHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.researchSourcesHeading h3 {
+  margin: 7px 0 0;
+  font-size: 20px;
+  letter-spacing: -.025em;
+}
+
+.researchSourceCount {
+  border-radius: 999px;
+  background: #edf1f5;
+  padding: 6px 10px;
+  color: #536273;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.researchSourceList {
+  display: grid;
+  gap: 10px;
+}
+
+.researchSourceCard {
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+  background: #fff;
+  scroll-margin-top: 28px;
+  overflow: hidden;
+}
+
+.researchSourceCard:target {
+  border-color: #3579bc;
+  box-shadow: 0 0 0 3px rgba(53, 121, 188, .12);
+}
+
+.researchSourceCard summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.researchSourceCard summary::-webkit-details-marker {
+  display: none;
+}
+
+.researchSourceIndex {
+  font-size: 12px;
+  font-weight: 800;
+  color: #728397;
+  padding-top: 2px;
+}
+
+.researchSourceTitle {
+  display: grid;
+  flex: 1;
+  gap: 6px;
+  min-width: 0;
+}
+
+.researchSourceTitle strong {
+  color: #19283a;
+  font-size: 13px;
+}
+
+.researchSourceTitle > span {
+  color: #4c6074;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.researchSourceTitle small {
+  color: #8a98a7;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .07em;
+}
+
+.researchSourceChevron {
+  color: #8a98a7;
+  transition: transform .2s;
+}
+
+.researchSourceCard[open] .researchSourceChevron {
+  transform: rotate(180deg);
+}
+
+.researchSourceContent {
+  padding: 0 16px 16px 40px;
+}
+
+.researchSourceContent p {
+  color: #4d5c6c;
+  font-size: 12px;
+  line-height: 1.8;
+  max-height: 300px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.researchSourceContent a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #286bad;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .researchWorkspaceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .researchWorkspace {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .researchWorkspaceHeading {
+    align-items: flex-start;
+  }
+
+  .researchSources {
+    padding: 14px;
+  }
+
+  .researchWorkspaceGrid {
+    gap: 16px;
+  }
+}
+
+
+/* Irish Law AI — refined legal editorial palette */
+
+.researchWorkspace {
+  --law-ink: #142437;
+  --law-muted: #657387;
+  --law-emerald: #176B57;
+  --law-gold: #B28A50;
+  --law-paper: #F7F5F0;
+  --law-border: #E5E0D6;
+}
+
+.researchWorkspaceHeading h2,
+.researchSourcesHeading h3 {
+  color: var(--law-ink);
+}
+
+.researchWorkspaceHeading p {
+  color: var(--law-muted);
+}
+
+.researchWorkspaceGrid {
+  gap: 24px;
+}
+
+.researchAnalysis {
+  background: #FFFFFF;
+  border: 1px solid var(--law-border);
+  box-shadow: 0 10px 32px rgba(20,36,55,.045);
+}
+
+.researchAnswerText {
+  color: var(--law-ink);
+  line-height: 1.9;
+}
+
+.researchSources {
+  background: var(--law-paper);
+  border: 1px solid var(--law-border);
+  box-shadow: none;
+}
+
+.researchSourceCard {
+  background: #FFFFFF;
+  border: 1px solid var(--law-border);
+}
+
+.researchSourceCard:hover {
+  border-color: #C7BBA7;
+}
+
+.researchSourceCard:target {
+  border-color: var(--law-emerald);
+  box-shadow: 0 0 0 3px rgba(23,107,87,.12);
+}
+
+.researchSourceTitle strong {
+  color: var(--law-ink);
+}
+
+.researchSourceTitle > span,
+.researchSourceContent p {
+  color: #4C5A67;
+}
+
+.researchSourceIndex {
+  color: var(--law-gold);
+}
+
+.researchSourceCount {
+  background: #EAE5DA;
+  color: var(--law-ink);
+}
+
+.researchCitation {
+  background: #E6F0EB;
+  color: var(--law-emerald);
+}
+
+.researchCitation:hover {
+  background: #D5E7DE;
+}
+
+.researchSourceContent a {
+  color: var(--law-emerald);
+}
+
+.researchSourceContent a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* IRISH LAW AI — UNIFIED DARK RESEARCH THEME */
+
+.researchWorkspace {
+  --research-bg: #101f27;
+  --research-raised: #162b34;
+  --research-border: #29424a;
+  --research-ink: #edf6f2;
+  --research-muted: #aec3bf;
+  --research-accent: #b8e7cf;
+  color: var(--research-ink);
+  margin-top: 42px;
+}
+
+.researchWorkspace .researchWorkspaceHeading h2 {
+  color: #f2faf6 !important;
+  font-size: clamp(29px, 3vw, 39px);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+}
+
+.researchWorkspace .researchWorkspaceHeading p {
+  color: var(--research-muted) !important;
+}
+
+.researchWorkspace .lawSectionEyebrow {
+  color: var(--research-accent) !important;
+}
+
+.researchWorkspace .lawResultPill {
+  color: var(--research-accent) !important;
+  background: #142932 !important;
+  border: 1px solid var(--research-border) !important;
+}
+
+.researchWorkspace .researchWorkspaceGrid {
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.researchWorkspace .researchAnalysis,
+.researchWorkspace .researchSources {
+  background: var(--research-bg) !important;
+  color: var(--research-ink) !important;
+  border: 1px solid var(--research-border) !important;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0,0,0,.10);
+}
+
+.researchWorkspace .researchAnalysis {
+  padding: clamp(20px, 3vw, 30px);
+  min-width: 0;
+}
+
+.researchWorkspace .lawAnswerTop {
+  border-bottom: 1px solid var(--research-border);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.researchWorkspace .lawAnswerTop > span {
+  color: var(--research-accent) !important;
+}
+
+.researchWorkspace .lawAnswerTop button {
+  background: var(--research-raised) !important;
+  color: var(--research-ink) !important;
+  border: 1px solid var(--research-border) !important;
+  border-radius: 8px;
+}
+
+.researchWorkspace .researchAnswerText {
+  color: var(--research-ink) !important;
+  white-space: normal;
+  font-size: 15px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.researchFormattedLine {
+  color: var(--research-ink);
+  margin-bottom: 12px;
+}
+
+.researchFormattedLine strong {
+  color: #f6fffa;
+  font-weight: 700;
+}
+
+.researchFormattedHeading {
+  color: var(--research-accent);
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 15px;
+}
+
+.researchFormattedNumbered,
+.researchFormattedBullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.researchListMarker {
+  flex: 0 0 24px;
+  color: var(--research-accent);
+  font-weight: 700;
+}
+
+.researchParagraphGap {
+  height: 10px;
+}
+
+.researchWorkspace .lawAnswerCaution {
+  color: var(--research-muted) !important;
+  border-top: 1px solid var(--research-border);
+  margin-top: 26px;
+  padding-top: 17px;
+}
+
+.researchWorkspace .researchSources {
+  padding: 20px;
+}
+
+.researchWorkspace .researchSourcesHeading h3 {
+  color: var(--research-ink) !important;
+}
+
+.researchWorkspace .researchSourceCount {
+  color: var(--research-accent) !important;
+  background: var(--research-raised) !important;
+  border: 1px solid var(--research-border) !important;
+}
+
+.researchWorkspace .researchSourceCard {
+  background: var(--research-raised) !important;
+  border: 1px solid var(--research-border) !important;
+  border-radius: 11px;
+}
+
+.researchWorkspace .researchSourceCard:hover,
+.researchWorkspace .researchSourceCard:target {
+  border-color: var(--research-accent) !important;
+}
+
+.researchWorkspace .researchSourceTitle strong {
+  color: var(--research-ink) !important;
+}
+
+.researchWorkspace .researchSourceTitle > span {
+  color: #c6d8d3 !important;
+}
+
+.researchWorkspace .researchSourceTitle small,
+.researchWorkspace .researchSourceChevron {
+  color: var(--research-muted) !important;
+}
+
+.researchWorkspace .researchSourceIndex {
+  color: #d5bb88 !important;
+}
+
+.researchWorkspace .researchSourceContent {
+  border-top: 1px solid var(--research-border);
+  padding-top: 14px;
+  padding-left: 16px;
+}
+
+.researchWorkspace .researchSourceContent p {
+  color: #d4e3df !important;
+  font-size: 13px;
+  line-height: 1.8;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.researchWorkspace .researchSourceContent a {
+  color: var(--research-accent) !important;
+}
+
+.researchWorkspace .researchCitation {
+  color: var(--research-accent) !important;
+  background: #21483f !important;
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+
+@media (max-width: 900px) {
+  .researchWorkspace .researchWorkspaceGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .researchWorkspace .researchAnalysis {
+    padding: 18px;
+  }
+
+  .researchWorkspace .researchSources {
+    padding: 14px;
+  }
+}

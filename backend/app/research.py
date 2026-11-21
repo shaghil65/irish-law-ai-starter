@@ -45,11 +45,11 @@ def find(q,limit=10,year=None,mode='keyword'):
         SELECT id,1.0/(60+rn) score FROM lexical WHERE %(mode)s IN ('keyword','hybrid')
         UNION ALL SELECT id,1.0/(60+rn) score FROM semantic WHERE %(mode)s IN ('semantic','hybrid')
       ) x GROUP BY id
-    ) SELECT p.id,p.kind,p.provision_number,p.heading,left(p.body_text,1800) excerpt,
+    ) SELECT p.id,p.kind,p.provision_number,p.heading,left(p.body_text,3500) excerpt,
       d.title,d.act_year,d.act_number,d.source_version,d.source_url,d.canonical_uri,p.structural_path,ranks.score
       FROM ranks JOIN legislation_provisions p ON p.id=ranks.id JOIN legislation_documents d ON d.id=p.document_id
       ORDER BY ranks.score DESC,p.id LIMIT %(limit)s'''
-    keyword='''SELECT p.id,p.kind,p.provision_number,p.heading,left(p.body_text,1800) excerpt,
+    keyword='''SELECT p.id,p.kind,p.provision_number,p.heading,left(p.body_text,3500) excerpt,
       d.title,d.act_year,d.act_number,d.source_version,d.source_url,d.canonical_uri,p.structural_path,
       ts_rank_cd(p.search_vector,websearch_to_tsquery('english',%(q)s)) score
       FROM legislation_provisions p JOIN legislation_documents d ON d.id=p.document_id
@@ -79,7 +79,12 @@ class AskRequest(BaseModel):
 
 @router.post('/api/research/ask')
 def ask(request:AskRequest):
-    hits=find(request.question,5,request.year,request.mode)
+    hits=find(request.question,12,request.year,request.mode)
+    hits=[
+        h for h in hits
+        if h['provision_number']
+        and h['kind'].lower() not in ('part','chapter','heading')
+    ][:6]
     if not hits:
         return {
             'answer': (
@@ -93,6 +98,6 @@ def ask(request:AskRequest):
         }
     sources=[{'number':i,'title':r['title'],'act_year':r['act_year'],'provision_number':r['provision_number'],'heading':r['heading'],'url':r['canonical_uri'] or r['source_url'],'excerpt':r['excerpt']} for i,r in enumerate(hits,1)]
     evidence='\n\n'.join(f"[{s['number']}] {s['title']}, provision {s['provision_number'] or 'unnumbered'}: {s['excerpt']}" for s in sources)
-    messages=[{'role':'system','content':'You are an Irish legislation research assistant. Use ONLY the numbered provisions supplied. Cite claims as [1], [2], etc. Never invent citations or legal facts. If evidence is insufficient, say so. This corpus contains enacted text and may not reflect amendments, commencement or current law. Be concise; not legal advice.'},{'role':'user','content':f'Question: {request.question}\n\nEvidence:\n{evidence}'}]
-    response=ollama('/api/chat',{'model':CHAT_MODEL,'messages':messages,'stream':False,'options':{'temperature':0.1,'num_predict':450}},timeout=180)
+    messages=[{'role':'system','content':'You are an Irish legislation research assistant. Use ONLY the supplied legislative evidence. Cite each substantive legal claim using the evidence numbers [1], [2], etc. Do not invent legal rules, citations, or subsection references. Do not attribute a rule to a section unless that section supports it. Avoid repetition. If evidence is insufficient, say so. This corpus contains enacted text and may not reflect amendments, commencement or current law. Be concise; not legal advice.'},{'role':'user','content':f'Question: {request.question}\n\nEvidence:\n{evidence}'}]
+    response=ollama('/api/chat',{'model':CHAT_MODEL,'messages':messages,'stream':False,'options':{'temperature':0.1,'num_predict':700}},timeout=180)
     return {'answer':response.get('message',{}).get('content','No answer returned.'),'sources':sources,'notice':'Verify against the current official law; not legal advice.'}

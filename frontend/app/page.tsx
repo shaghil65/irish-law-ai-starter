@@ -46,7 +46,103 @@ export default function Home(){
   {results&&<section className="lawResults" aria-live="polite"><div className="lawSectionHeader"><div><span className="lawSectionEyebrow">RESEARCH RESULTS</span><h2>{results.length} provisions found</h2></div><span className="lawResultPill">{mode.toUpperCase()} SEARCH</span></div>{results.length===0&&<div className="lawEmpty">No matching provisions in the imported corpus. Try a broader query or a different search mode.</div>}
    <div className="lawResultList">{results.map((r,i)=><article className="lawResultCard" key={r.id}><div className="lawCardTop"><span className="lawCardIndex">{String(i+1).padStart(2,"0")}</span><span className="lawCardMeta">{r.act_year} · ACT NO. {r.act_number}</span></div><h3>{r.title}</h3><div className="lawProvision"><span>§ {r.provision_number||r.kind}</span>{r.heading&&<strong>{r.heading}</strong>}</div><p className="lawExcerpt">{r.excerpt}</p><div className="lawCardFooter"><span>Source: {r.source_version||"Enacted legislation"}</span><a href={r.canonical_uri||r.source_url} target="_blank" rel="noopener noreferrer">View original Act <Icon name="external"/></a></div></article>)}</div>
   </section>}
-  {answer!==null&&<section className="lawResults" aria-live="polite"><div className="lawSectionHeader"><div><span className="lawSectionEyebrow">AI-ASSISTED RESEARCH</span><h2>Your research answer</h2></div><span className="lawResultPill">{sources.length} SOURCES</span></div><article className="lawAnswerCard"><div className="lawAnswerTop"><span><Icon name="spark"/> GROUNDED RESPONSE</span><button type="button" onClick={()=>void copyAnswer()}><Icon name={copied?"check":"copy"}/>{copied?"Copied":"Copy answer"}</button></div><div className="lawAnswerBody">{answer}</div><p className="lawAnswerCaution">AI can make mistakes. Check every cited provision and its current legal status before relying on this answer.</p></article><div className="lawEvidenceHeader"><span className="lawSectionEyebrow">SUPPORTING EVIDENCE</span><h2>Retrieved provisions</h2></div><div className="lawResultList">{sources.map(s=><article className="lawResultCard" key={s.number}><div className="lawCardTop"><span className="lawCardIndex">{String(s.number).padStart(2,"0")}</span><span className="lawCardMeta">{s.act_year} · EVIDENCE</span></div><h3>{s.title}</h3><div className="lawProvision"><span>§ {s.provision_number||"—"}</span>{s.heading&&<strong>{s.heading}</strong>}</div><p className="lawExcerpt">{s.excerpt}</p><div className="lawCardFooter"><span>Official legislation</span><a href={s.url} target="_blank" rel="noopener noreferrer">View source <Icon name="external"/></a></div></article>)}</div></section>}
+  {answer!==null&&<section className="lawResults researchWorkspace" aria-live="polite">
+    <div className="researchWorkspaceHeading">
+      <div>
+        <span className="lawSectionEyebrow">LEGAL RESEARCH WORKSPACE</span>
+        <h2>Research analysis</h2>
+        <p>AI-assisted interpretation with primary legislation alongside.</p>
+      </div>
+      <span className="lawResultPill">{sources.length} SOURCES</span>
+    </div>
+
+    <div className="researchWorkspaceGrid">
+      <article className="lawAnswerCard researchAnalysis">
+        <div className="lawAnswerTop">
+          <span><Icon name="spark"/> AI ANALYSIS</span>
+          <button type="button" onClick={()=>void copyAnswer()}>
+            <Icon name={copied?"check":"copy"}/>
+            {copied?"Copied":"Copy answer"}
+          </button>
+        </div>
+
+        <div className="lawAnswerBody researchAnswerText">
+          {answer.split(/\n/).map((line,i)=>{
+            const trimmed=line.trim();
+            if(!trimmed)return <div key={i} className="researchParagraphGap"/>;
+
+            const heading=/^#{1,4}\s+/.test(trimmed);
+            const numbered=/^\d+[.)]\s+/.test(trimmed);
+            const bullet=/^[-*]\s+/.test(trimmed);
+
+            const content=trimmed.replace(/^#{1,4}\s+|^\d+[.)]\s+|^[-*]\s+/,"");
+            const pieces=content.split(/(\*\*[^*]+\*\*|\[\d+\])/g);
+
+            return <div key={i} className={[
+              "researchFormattedLine",
+              heading?"researchFormattedHeading":"",
+              numbered?"researchFormattedNumbered":"",
+              bullet?"researchFormattedBullet":""
+            ].filter(Boolean).join(" ")}>
+              {numbered&&<span className="researchListMarker">{trimmed.match(/^\d+/)?.[0]}.</span>}
+              {bullet&&<span className="researchListMarker">•</span>}
+              <span>
+                {pieces.map((piece,j)=>{
+                  const match=piece.match(/^\[(\d+)\]$/);
+                  const source=match?sources.find(s=>s.number===Number(match[1])):null;
+                  if(source)return <a key={j} href={"#research-source-"+source.number} className="researchCitation" title={"View source "+source.number}>{piece}</a>;
+                  if(/^\*\*[^*]+\*\*$/.test(piece))return <strong key={j}>{piece.slice(2,-2)}</strong>;
+                  return <span key={j}>{piece}</span>;
+                })}
+              </span>
+            </div>;
+          })}
+        </div>
+
+        <p className="lawAnswerCaution">
+          AI can make mistakes. Verify cited provisions and their current legal status.
+        </p>
+      </article>
+
+      <aside className="researchSources" aria-label="Supporting legislation">
+        <div className="researchSourcesHeading">
+          <div>
+            <span className="lawSectionEyebrow">PRIMARY SOURCES</span>
+            <h3>Supporting legislation</h3>
+          </div>
+          <span className="researchSourceCount">{sources.length}</span>
+        </div>
+
+        <div className="researchSourceList">
+          {sources.map((s,i)=>
+            <details
+              className="researchSourceCard"
+              id={"research-source-"+s.number}
+              key={s.number}
+              open={i===0?true:undefined}
+            >
+              <summary>
+                <span className="researchSourceIndex">{String(s.number).padStart(2,"0")}</span>
+                <span className="researchSourceTitle">
+                  <strong>{s.title}</strong>
+                  <span>§ {s.provision_number||"—"} · {s.heading||"Legislative provision"}</span>
+                  <small>{s.act_year} · ENACTED LEGISLATION</small>
+                </span>
+                <span className="researchSourceChevron">⌄</span>
+              </summary>
+
+              <div className="researchSourceContent">
+                <p>{s.excerpt}</p>
+                <a href={s.url} target="_blank" rel="noopener noreferrer">
+                  Read official legislation <Icon name="external"/>
+                </a>
+              </div>
+            </details>
+          )}
+        </div>
+      </aside>
+    </div>
+  </section>}
   <section className="lawFeatures"><div><span className="lawFeatureIcon">01</span><strong>Source-led answers</strong><p>Original provisions accompany AI research, so you can verify the law yourself.</p></div><div><span className="lawFeatureIcon">02</span><strong>Three search modes</strong><p>Use exact keywords, meaning-based retrieval, or a combination of both.</p></div><div><span className="lawFeatureIcon">03</span><strong>Local-first AI</strong><p>Run the AI models on your own Mac with Ollama and no paid API calls.</p></div></section>
   </main><footer className="lawFooter"><div><span className="lawFooterBrand">§ Irish Law AI</span><span>Built for transparent legal research.</span></div><p>Research preview · Imported enacted Acts may be amended, repealed, or not commenced. Not legal advice.</p></footer>
  </div>;
