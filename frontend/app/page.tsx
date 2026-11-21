@@ -1,119 +1,65 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-type ApiStatus = {
-  api: string;
-  stage: number;
-  database_configured: boolean;
-  legal_corpus_ready: boolean;
-  answer_engine_ready: boolean;
-  message: string;
+type Result = {
+  id: number; kind: string; provision_number: string | null; heading: string | null;
+  excerpt: string; title: string; act_year: number; act_number: number;
+  source_version: string; source_url: string; canonical_uri: string; structural_path: string;
 };
+type SearchResponse = { query: string; count: number; results: Result[]; corpus: string };
 
 export default function Home() {
-  const [status, setStatus] = useState<ApiStatus | null>(null);
-  const [question, setQuestion] = useState("");
-  const [notice, setNotice] = useState("");
+  const [q, setQ] = useState("");
+  const [year, setYear] = useState("");
+  const [data, setData] = useState<SearchResponse | null>(null);
   const [loading, setLoading] = useState(false);
-
+  const [error, setError] = useState("");
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
-  useEffect(() => {
-    fetch(`${apiUrl}/api/status`)
-      .then((r) => r.json())
-      .then(setStatus)
-      .catch(() => setStatus(null));
-  }, [apiUrl]);
-
-  async function submitQuestion(event: React.FormEvent<HTMLFormElement>) {
+  async function search(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!question.trim()) return;
-    setLoading(true);
-    setNotice("");
+    if (q.trim().length < 2) return;
+    setLoading(true); setError(""); setData(null);
     try {
-      const response = await fetch(`${apiUrl}/api/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question })
-      });
-      const data = await response.json();
-      setNotice(data.detail || "The API responded.");
-    } catch {
-      setNotice("Cannot reach the backend. Check that Docker services are running.");
-    } finally {
-      setLoading(false);
-    }
+      const params = new URLSearchParams({ q: q.trim(), limit: "25" });
+      if (year) params.set("year", year);
+      const response = await fetch(`${apiUrl}/api/search?${params.toString()}`);
+      if (!response.ok) throw new Error(`Search failed (HTTP ${response.status})`);
+      setData(await response.json());
+    } catch (e) { setError(e instanceof Error ? e.message : "Search unavailable"); }
+    finally { setLoading(false); }
   }
 
   return (
-    <main className="shell">
-      <header className="topbar">
-        <a className="brand" href="/" aria-label="Irish Law AI home">
-          <span className="brandMark">§</span>
-          <span>Irish Law AI</span>
-        </a>
-        <span className="topTag">RESEARCH PREVIEW · STAGE 1</span>
-      </header>
-
-      <section className="hero">
-        <div className="eyebrow"><span className="pulse" /> BUILT AROUND IRISH LEGISLATION</div>
-        <h1>Understand Irish law.<br /><em>With the sources attached.</em></h1>
-        <p className="intro">
-          A legal research assistant designed to explain Irish legislation in plain English
-          and show the statutory provisions behind every answer.
-        </p>
-
-        <div className="statusCard">
-          <div className="statusHead">
-            <strong>Development system status</strong>
-            <span className={status?.api === "online" ? "statusPill online" : "statusPill"}>
-              {status?.api === "online" ? "API ONLINE" : "CHECKING API"}
-            </span>
+    <main className="searchShell">
+      <header className="searchHeader"><span className="brand"><span className="brandMark">§</span> Irish Law AI</span><span className="topTag">STAGE 3 · LEGAL SEARCH</span></header>
+      <section className="searchHero">
+        <p className="eyebrow">IRISH LEGISLATION RESEARCH</p>
+        <h1>Find the law.<br /><em>Read the source.</em></h1>
+        <p className="intro">Search imported Irish Acts and inspect the underlying provisions. Results link to the official Irish Statute Book.</p>
+        <form onSubmit={search} className="searchForm">
+          <label htmlFor="search" className="miniLabel">SEARCH LEGISLATION</label>
+          <div className="searchControls">
+            <input id="search" value={q} onChange={e => setQ(e.target.value)} placeholder="e.g. district court jurisdiction" minLength={2} maxLength={300} required />
+            <input aria-label="Filter by Act year" value={year} onChange={e => setYear(e.target.value)} placeholder="Year (optional)" type="number" min="1922" max="2100" />
+            <button type="submit" disabled={loading}>{loading ? "Searching…" : "Search"}</button>
           </div>
-          <div className="statusGrid">
-            <div><span>Backend API</span><b>{status?.api === "online" ? "Connected" : "Not connected"}</b></div>
-            <div><span>Database config</span><b>{status ? (status.database_configured ? "Configured" : "Missing") : "Checking…"}</b></div>
-            <div><span>Irish law corpus</span><b>{status?.legal_corpus_ready ? "Ready" : "Not imported yet"}</b></div>
-            <div><span>Answer engine</span><b>{status?.answer_engine_ready ? "Ready" : "Not enabled yet"}</b></div>
-          </div>
-        </div>
-
-        <section className="chatCard">
-          <div className="chatTitle">
-            <div>
-              <span className="miniLabel">TRY THE INTERFACE</span>
-              <h2>Ask an Irish law question</h2>
-            </div>
-            <span className="lockIcon">§</span>
-          </div>
-          <form onSubmit={submitQuestion}>
-            <label className="srOnly" htmlFor="question">Your legal question</label>
-            <textarea
-              id="question"
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
-              placeholder="e.g. What notice must a landlord give before ending a tenancy?"
-              rows={3}
-            />
-            <button type="submit" disabled={loading || !question.trim()}>
-              {loading ? "Checking…" : "Send question"} <span>→</span>
-            </button>
-          </form>
-          {notice && <div className="notice" role="status">{notice}</div>}
-          <p className="disclaimer">
-            The legal answer engine is intentionally disabled in this first setup stage.
-            Do not use this preview for legal decisions.
-          </p>
-        </section>
+        </form>
+        <p className="legalNotice">Research preview · Enacted legislation only. Provisions may have been amended, repealed or not commenced. Not legal advice.</p>
       </section>
-
-      <section className="featureRow">
-        <div><span>01</span><strong>Official sources</strong><p>Build on Irish legislation, not model memory.</p></div>
-        <div><span>02</span><strong>Provision-level search</strong><p>Retrieve the sections relevant to each question.</p></div>
-        <div><span>03</span><strong>Visible citations</strong><p>Show the legal text and its source alongside explanations.</p></div>
-      </section>
-      <footer>Independent research tool · Not a solicitor · Not legal advice</footer>
+      {error && <p role="alert" className="searchError">{error}</p>}
+      {data && <section className="searchResults" aria-live="polite">
+        <h2>{data.count} matching provisions{data.count === 25 ? " (first 25)" : ""}</h2>
+        {data.results.length === 0 && <p>No matches in the imported corpus. Try broader terms or remove the year filter.</p>}
+        {data.results.map(item => <article className="resultCard" key={item.id}>
+          <p className="resultMeta">{item.act_year} · Act No. {item.act_number} · {item.source_version}</p>
+          <h3>{item.title}</h3>
+          <p className="resultHeading">{item.kind}{item.provision_number ? ` ${item.provision_number}` : ""}{item.heading ? ` — ${item.heading}` : ""}</p>
+          <p className="resultExcerpt">{item.excerpt}{item.excerpt.length >= 550 ? "…" : ""}</p>
+          <a href={item.source_url} target="_blank" rel="noopener noreferrer">View official enacted Act ↗</a>
+        </article>)}
+      </section>}
     </main>
   );
 }

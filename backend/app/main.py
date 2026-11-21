@@ -64,3 +64,8 @@ def chat(payload: dict):
             "question_received": question,
         },
     )
+
+
+# Stage 3 keyword search
+from app.search import router as search_router
+app.include_router(search_router)
