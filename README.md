@@ -1,5 +1,10 @@
 # Irish Law AI
 
+## Application Screenshot
+
+![Irish Law AI — Homepage](screenshots/homepage.png)
+
+
 **Find the provision. Understand the law.**
 
 Irish Law AI is an open-source-style, local-first legal research application for exploring Irish legislation. It combines full-text and semantic search with AI-assisted answers and supporting references to the [Irish Statute Book](https://www.irishstatutebook.ie/). The AI runs locally through Ollama, with no paid AI API required.
