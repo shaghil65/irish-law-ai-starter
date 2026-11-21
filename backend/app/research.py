@@ -36,7 +36,9 @@ def find(q,limit=10,year=None,mode='keyword'):
     ), semantic AS (
       SELECT e.provision_id AS id, row_number() OVER (ORDER BY e.embedding <=> %(vec)s::vector,e.provision_id) AS rn
       FROM legislation_embeddings e JOIN legislation_provisions p ON p.id=e.provision_id JOIN legislation_documents d ON d.id=p.document_id
-      WHERE e.model=%(model)s AND (%(year)s::integer IS NULL OR d.act_year=%(year)s::integer)
+      WHERE e.model=%(model)s
+        AND (%(year)s::integer IS NULL OR d.act_year=%(year)s::integer)
+        AND (e.embedding <=> %(vec)s::vector) < 0.45
       ORDER BY e.embedding <=> %(vec)s::vector LIMIT 100
     ), ranks AS (
       SELECT id,sum(score) score FROM (
@@ -78,7 +80,17 @@ class AskRequest(BaseModel):
 @router.post('/api/research/ask')
 def ask(request:AskRequest):
     hits=find(request.question,5,request.year,request.mode)
-    if not hits: return {'answer':'No relevant provisions found in the imported legislation.','sources':[]}
+    if not hits:
+        return {
+            'answer': (
+                'I could not find sufficiently relevant provisions '
+                'in the currently imported Irish legislation. '
+                'This does not mean Irish law contains no relevant provisions.'
+            ),
+            'sources': [],
+            'status': 'insufficient_evidence',
+            'notice': 'Verify against current official legislation.'
+        }
     sources=[{'number':i,'title':r['title'],'act_year':r['act_year'],'provision_number':r['provision_number'],'heading':r['heading'],'url':r['canonical_uri'] or r['source_url'],'excerpt':r['excerpt']} for i,r in enumerate(hits,1)]
     evidence='\n\n'.join(f"[{s['number']}] {s['title']}, provision {s['provision_number'] or 'unnumbered'}: {s['excerpt']}" for s in sources)
     messages=[{'role':'system','content':'You are an Irish legislation research assistant. Use ONLY the numbered provisions supplied. Cite claims as [1], [2], etc. Never invent citations or legal facts. If evidence is insufficient, say so. This corpus contains enacted text and may not reflect amendments, commencement or current law. Be concise; not legal advice.'},{'role':'user','content':f'Question: {request.question}\n\nEvidence:\n{evidence}'}]

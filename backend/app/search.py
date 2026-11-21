@@ -14,7 +14,17 @@ def search(q: str = Query(min_length=2, max_length=300), limit: int = Query(20, 
            LEFT(p.body_text, 550) AS excerpt,
            d.title, d.act_year, d.act_number, d.source_version, d.source_url,
            d.canonical_uri, p.structural_path,
-           ts_rank_cd(p.search_vector, terms.query) AS rank
+           (
+           ts_rank_cd(p.search_vector, terms.query)
+           + 2.0 * ts_rank_cd(
+               to_tsvector('english', COALESCE(d.title, '')),
+               terms.query
+           )
+           + 1.5 * ts_rank_cd(
+               to_tsvector('english', COALESCE(p.heading, '')),
+               terms.query
+           )
+       ) AS rank
     FROM legislation_provisions p
     JOIN legislation_documents d ON d.id = p.document_id
     CROSS JOIN terms
