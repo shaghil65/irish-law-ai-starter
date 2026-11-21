@@ -1,159 +1,159 @@
-# Irish Law AI — Stage 1 starter
+# Irish Law AI
 
-A local development scaffold for an Irish-law research assistant. Stage 1 verifies that the web UI, FastAPI backend and PostgreSQL/pgvector database start correctly.
+**Find the provision. Understand the law.**
 
-**Important:** This starter does not yet provide legal answers or ingest legislation. Do not rely on it for legal advice. Legal retrieval, source/version tracking, citation validation and evaluation are later stages.
+Irish Law AI is a local-first research preview for searching imported Irish legislation and generating evidence-led answers. It combines a Next.js frontend, a FastAPI backend, PostgreSQL full-text search, pgvector, and locally hosted Ollama models. No paid AI API is required.
 
-## Requirements
+> **Important:** This is a research preview, not legal advice. The corpus is incomplete, and enacted Acts may have been amended, repealed, or not commenced. AI answers and citations can be wrong or irrelevant. Always verify the current law using the [Irish Statute Book](https://www.irishstatutebook.ie/).
 
-- macOS (Apple Silicon or Intel)
-- Docker Desktop
-- Node.js 22 LTS (Node 20.9+ is the minimum for current Next.js releases)
-- Git (optional but recommended)
-- 16 GB RAM is suitable for development. We will run the language model natively on macOS in a later stage, not inside Docker.
+## Features
 
-## 1. Install prerequisites
+- Responsive legal research interface with example questions and supporting evidence cards.
+- Keyword search using PostgreSQL full-text search.
+- Semantic search using locally generated embeddings.
+- Hybrid search combining lexical and semantic results.
+- AI-assisted answers using Ollama, with links to retrieved source legislation.
+- Optional Act-year filter.
 
-### Homebrew (if not already installed)
+**Known limitation:** Search relevance needs further work. For example, a query about *company directors' duties* has retrieved unrelated provisions about a director of a policing authority. An AI answer is **not** reliable merely because sources are displayed alongside it.
 
-Follow the official instructions: https://brew.sh/
+## Stack
 
-Then:
+| Layer | Technology |
+| --- | --- |
+| Frontend | Next.js, React, TypeScript |
+| API | Python, FastAPI |
+| Database | PostgreSQL, pgvector |
+| Local chat model | Ollama `llama3.2:3b` |
+| Local embedding model | Ollama `nomic-embed-text` |
+| Containers | Docker Compose |
 
-```bash
-brew update
-brew install node@22 git
-```
+## Local setup (current macOS configuration)
 
-If `node` is not found after installation, follow Homebrew's suggested PATH instructions. Check:
-
-```bash
-node --version
-npm --version
-git --version
-```
-
-### Docker Desktop
-
-Download the correct Mac installer (Apple silicon or Intel) from:
-https://docs.docker.com/desktop/setup/install/mac-install/
-
-Open the downloaded DMG, drag Docker to Applications, launch Docker Desktop, and accept its terms. Wait until Docker reports that it is running.
-
-Verify:
+Install Docker Desktop and Ollama. In the project directory, create `.env` from `.env.example` **only if `.env` does not already exist**:
 
 ```bash
-docker version
-docker compose version
-docker run --rm hello-world
+cp -n .env.example .env
 ```
 
-## 2. Unzip and enter the project
+Install and start the local models:
 
 ```bash
-cd ~/Downloads
-unzip irish-law-ai-starter.zip
-cd irish-law-ai-starter
+brew install ollama
+ollama serve
 ```
 
-If you extracted it somewhere else, `cd` to that folder instead.
-
-## 3. Configure environment
+Keep that terminal open if you started the server manually. In another terminal:
 
 ```bash
-cp .env.example .env
+ollama pull llama3.2:3b
+ollama pull nomic-embed-text
+ollama list
 ```
 
-The included values are for local development only. Change `POSTGRES_PASSWORD` before any shared or production deployment. Do not commit `.env`.
+If Ollama is already running, you do not need another `ollama serve` process.
 
-## 4. Start the application
+Start the current working Docker setup:
 
 ```bash
-docker compose up --build
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.free.yml \
+  -f docker-compose.portfix.yml \
+  -f docker-compose.backendfix.yml \
+  -f docker-compose.frontendfix.yml \
+  up -d --build db backend frontend
 ```
 
-First startup downloads the PostgreSQL image and installs the frontend/backend dependencies, so it may take a few minutes.
+Open **http://localhost:3001**. In this development setup the frontend is published on host port 3001; the backend and database communicate over Docker's internal network.
 
-Open:
+### Index legislation for semantic search
 
-- Frontend: http://localhost:3000
-- Backend API docs: http://localhost:8000/docs
-- Backend health: http://localhost:8000/health
-- Backend status: http://localhost:8000/api/status
-
-The page should show that the API is reachable and that the legal corpus / answer engine are not enabled yet.
-
-Stop the stack with `Ctrl+C`. To stop and remove containers:
+Once Ollama is reachable from the backend and legislation has been imported:
 
 ```bash
-docker compose down
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.free.yml \
+  -f docker-compose.portfix.yml \
+  -f docker-compose.backendfix.yml \
+  -f docker-compose.frontendfix.yml \
+  exec backend python -m app.index_local_embeddings
 ```
 
-To also delete the local database volume (this permanently deletes local database data):
+Indexing can take time on a local computer. Keyword search does not require Ollama or embeddings; semantic and hybrid modes do.
+
+## API
+
+| Method | Route | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/search` | Keyword provision search |
+| `GET` | `/api/research/search` | Keyword, semantic, or hybrid retrieval |
+| `POST` | `/api/research/ask` | Local AI answer based on retrieved provisions |
+
+Example request from inside the backend container:
 
 ```bash
-docker compose down -v
+python - <<'PY'
+import requests
+r = requests.get('http://localhost:8000/api/research/search', params={'q':'company directors','mode':'keyword','limit':5}, timeout=30)
+print(r.status_code)
+print(r.json())
+PY
 ```
 
-## 5. Check the database
+## Data coverage and verification
+
+At a previously reported development checkpoint, the local database contained **49 Acts and 3,496 provisions**. This is a historical development snapshot, not a live count or comprehensive coverage of Irish law. The imported material was primarily 2024 enacted legislation; principal Acts relevant to a question may be absent.
+
+Source links currently may lead to an Act rather than the precise provision. Always inspect the original text and check amendments, commencement, and current legal status.
+
+**Preserve your data:** Do **not** run `docker compose down -v`; removing volumes can destroy the PostgreSQL database. Use `docker compose stop` with the same five Compose files to stop services without deleting volumes.
+
+## Troubleshooting
+
+**Ollama unavailable:**
 
 ```bash
-docker compose exec db psql -U lawai -d irish_law -c '\dx'
+ollama list
+curl http://localhost:11434/api/tags
 ```
 
-You should see `vector` in the installed extensions list. The initial schema is in `database/init/001_schema.sql`.
+On Docker Desktop for Mac, the backend typically connects to the host Ollama service at `http://host.docker.internal:11434`.
 
-## 6. Useful development commands
+**Check container status:**
 
 ```bash
-# Follow all service logs
-docker compose logs -f
-
-# Follow one service
-docker compose logs -f backend
-docker compose logs -f frontend
-docker compose logs -f db
-
-# Restart after changing Docker configuration
-docker compose up --build
-
-# Check containers
-docker compose ps
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.free.yml \
+  -f docker-compose.portfix.yml \
+  -f docker-compose.backendfix.yml \
+  -f docker-compose.frontendfix.yml \
+  ps
 ```
 
-The frontend and backend source folders are mounted into their containers for live development.
+**Irrelevant answers:** Inspect retrieved provisions first. Hybrid reciprocal-rank fusion does not guarantee legal relevance, and semantic distance thresholds are experimental. If the corpus lacks the relevant legislation, do not treat the answer as authoritative.
 
-## Project layout
+## Optional temporary public demo
 
-```text
-irish-law-ai/
-├── backend/
-│   ├── app/
-│   │   └── main.py
-│   ├── Dockerfile
-│   └── requirements.txt
-├── database/
-│   └── init/
-│       └── 001_schema.sql
-├── frontend/
-│   ├── app/
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── Dockerfile
-│   └── package.json
-├── .env.example
-├── .gitignore
-└── docker-compose.yml
+A Cloudflare Quick Tunnel can expose the locally running frontend while your Mac stays online:
+
+```bash
+brew install cloudflared
+cloudflared tunnel --url http://localhost:3001
 ```
 
-## Next stages
+This is a **temporary demonstration**, not production hosting. Before sharing publicly, review authentication, rate limits, abuse prevention, resource limits, and security. Do not expose the database or Ollama service directly.
 
-1. Import and parse official Irish legislation, preserving official identifiers, source URLs, dates and amendment/revision status.
-2. Add ingestion validation and a source/version model.
-3. Add hybrid lexical + vector retrieval and reranking.
-4. Connect a locally hosted model (Ollama) only after retrieval is working.
-5. Require answers to cite retrieved provisions; validate every citation against the stored source.
-6. Build an evaluation set with Irish legal questions and have qualified reviewers assess accuracy.
+## Roadmap
 
-Never treat a section's existence as proof that its wording is current or applicable. The production system must distinguish enacted text, revised text, commencement, amendments and repeals.
+- Import more principal Acts and track their current legal status.
+- Improve legal-topic retrieval, reranking, and evidence sufficiency checks.
+- Add section-specific source links and automated legal-relevance tests.
+- Consolidate the local Compose overrides.
+- Add security controls before public launch.
+
+## License
+
+No license has yet been specified. Do not assume the repository is open-source licensed until one is added.
