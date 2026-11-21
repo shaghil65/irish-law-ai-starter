@@ -69,3 +69,8 @@ def chat(payload: dict):
 # Stage 3 keyword search
 from app.search import router as search_router
 app.include_router(search_router)
+
+
+# Stages 4-5 hybrid retrieval and grounded answers
+from app.research import router as research_router
+app.include_router(research_router)

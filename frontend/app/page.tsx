@@ -1,65 +1,42 @@
 "use client";
-
 import { useState } from "react";
 
-type Result = {
-  id: number; kind: string; provision_number: string | null; heading: string | null;
-  excerpt: string; title: string; act_year: number; act_number: number;
-  source_version: string; source_url: string; canonical_uri: string; structural_path: string;
-};
-type SearchResponse = { query: string; count: number; results: Result[]; corpus: string };
-
+type Hit = {id:number; kind:string; provision_number:string|null; heading:string|null; excerpt:string; title:string; act_year:number; act_number:number; source_version:string; source_url:string; canonical_uri:string; score:number};
+type Source = {number:number; title:string; act_year:number; provision_number:string|null; heading:string|null; url:string; excerpt:string};
+const API = "";
 export default function Home() {
-  const [q, setQ] = useState("");
-  const [year, setYear] = useState("");
-  const [data, setData] = useState<SearchResponse | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-
-  async function search(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    if (q.trim().length < 2) return;
-    setLoading(true); setError(""); setData(null);
-    try {
-      const params = new URLSearchParams({ q: q.trim(), limit: "25" });
-      if (year) params.set("year", year);
-      const response = await fetch(`${apiUrl}/api/search?${params.toString()}`);
-      if (!response.ok) throw new Error(`Search failed (HTTP ${response.status})`);
-      setData(await response.json());
-    } catch (e) { setError(e instanceof Error ? e.message : "Search unavailable"); }
-    finally { setLoading(false); }
-  }
-
-  return (
-    <main className="searchShell">
-      <header className="searchHeader"><span className="brand"><span className="brandMark">§</span> Irish Law AI</span><span className="topTag">STAGE 3 · LEGAL SEARCH</span></header>
-      <section className="searchHero">
-        <p className="eyebrow">IRISH LEGISLATION RESEARCH</p>
-        <h1>Find the law.<br /><em>Read the source.</em></h1>
-        <p className="intro">Search imported Irish Acts and inspect the underlying provisions. Results link to the official Irish Statute Book.</p>
-        <form onSubmit={search} className="searchForm">
-          <label htmlFor="search" className="miniLabel">SEARCH LEGISLATION</label>
-          <div className="searchControls">
-            <input id="search" value={q} onChange={e => setQ(e.target.value)} placeholder="e.g. district court jurisdiction" minLength={2} maxLength={300} required />
-            <input aria-label="Filter by Act year" value={year} onChange={e => setYear(e.target.value)} placeholder="Year (optional)" type="number" min="1922" max="2100" />
-            <button type="submit" disabled={loading}>{loading ? "Searching…" : "Search"}</button>
-          </div>
-        </form>
-        <p className="legalNotice">Research preview · Enacted legislation only. Provisions may have been amended, repealed or not commenced. Not legal advice.</p>
-      </section>
-      {error && <p role="alert" className="searchError">{error}</p>}
-      {data && <section className="searchResults" aria-live="polite">
-        <h2>{data.count} matching provisions{data.count === 25 ? " (first 25)" : ""}</h2>
-        {data.results.length === 0 && <p>No matches in the imported corpus. Try broader terms or remove the year filter.</p>}
-        {data.results.map(item => <article className="resultCard" key={item.id}>
-          <p className="resultMeta">{item.act_year} · Act No. {item.act_number} · {item.source_version}</p>
-          <h3>{item.title}</h3>
-          <p className="resultHeading">{item.kind}{item.provision_number ? ` ${item.provision_number}` : ""}{item.heading ? ` — ${item.heading}` : ""}</p>
-          <p className="resultExcerpt">{item.excerpt}{item.excerpt.length >= 550 ? "…" : ""}</p>
-          <a href={item.source_url} target="_blank" rel="noopener noreferrer">View official enacted Act ↗</a>
-        </article>)}
-      </section>}
-    </main>
-  );
+ const [q,setQ]=useState(""); const [year,setYear]=useState(""); const [mode,setMode]=useState("keyword");
+ const [results,setResults]=useState<Hit[]|null>(null); const [answer,setAnswer]=useState<string|null>(null);
+ const [sources,setSources]=useState<Source[]>([]); const [busy,setBusy]=useState(false); const [error,setError]=useState("");
+ async function run(ask:boolean) {
+  if(q.trim().length<2) return; setBusy(true); setError(""); setAnswer(null); setSources([]); setResults(null);
+  try {
+   let response:Response;
+   if(ask) response=await fetch(`${API}/api/research/ask`, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q.trim(),mode,year:year?Number(year):null})});
+   else {const params=new URLSearchParams({q:q.trim(),mode,limit:"20"});if(year)params.set("year",year);response=await fetch(`${API}/api/research/search?${params}`);}
+   const payload=await response.json(); if(!response.ok) throw new Error(payload.detail||`HTTP ${response.status}`);
+   if(ask){setAnswer(payload.answer);setSources(payload.sources||[]);}else setResults(payload.results||[]);
+  }catch(e){setError(e instanceof Error?e.message:"Request failed");}finally{setBusy(false);}
+ }
+ return <main className="searchShell">
+  <header className="searchHeader"><span className="brand"><span className="brandMark">§</span> Irish Law AI</span><span className="topTag">LOCAL AI · FREE DEPLOYMENT</span></header>
+  <section className="searchHero"><p className="eyebrow">IRISH LEGISLATION RESEARCH</p><h1>Find the law.<br/><em>Check the source.</em></h1>
+   <p className="intro">Keyword and semantic retrieval over imported Irish Acts, with evidence-grounded AI research answers.</p>
+   <form className="searchForm" onSubmit={e=>{e.preventDefault();void run(false);}}>
+    <label className="miniLabel" htmlFor="legalQuery">SEARCH LEGISLATION</label>
+    <div className="searchControls"><input id="legalQuery" value={q} onChange={e=>setQ(e.target.value)} minLength={2} maxLength={300} placeholder="e.g. family court jurisdiction" required/>
+     <input aria-label="Filter by Act year" type="number" min="1922" max="2100" placeholder="Year" value={year} onChange={e=>setYear(e.target.value)}/>
+     <button type="submit" disabled={busy||q.trim().length<2}>{busy?"Working…":"Search"}</button></div>
+    <div className="researchOptions"><label htmlFor="searchMode">Search mode</label><select id="searchMode" value={mode} onChange={e=>setMode(e.target.value)}><option value="keyword">Keyword (offline)</option><option value="hybrid">Hybrid (keyword + semantic)</option><option value="semantic">Semantic (meaning-based)</option></select>
+     <button type="button" disabled={busy||q.trim().length<5} onClick={()=>void run(true)}>Ask AI with citations</button></div>
+   </form><p className="legalNotice">Research preview · Enacted legislation only. Provisions may be amended, repealed or not commenced. Not legal advice. AI answers may be inaccurate; verify all citations.</p>
+  </section>
+  {error&&<p role="alert" className="searchError">{error}</p>}
+  {results&&<section className="searchResults" aria-live="polite"><h2>{results.length} retrieved provisions</h2>{results.length===0&&<p>No matches in the imported corpus. Try broader terms or another mode.</p>}
+   {results.map(r=><article className="resultCard" key={r.id}><p className="resultMeta">{r.act_year} · Act No. {r.act_number} · {r.source_version}</p><h3>{r.title}</h3><p className="resultHeading">{r.kind} {r.provision_number} {r.heading?`— ${r.heading}`:""}</p><p className="resultExcerpt">{r.excerpt}…</p><a href={r.canonical_uri} target="_blank" rel="noopener noreferrer">Official enacted Act ↗</a></article>)}
+  </section>}
+  {answer!==null&&<section className="searchResults" aria-live="polite"><h2>AI research answer</h2><article className="resultCard"><p className="aiAnswer">{answer}</p><p className="legalNotice">Citation numbers refer to the evidence list below. Verify against official sources.</p></article><h2>Evidence cited / retrieved</h2>
+   {sources.map(s=><article className="resultCard" key={s.number}><p className="resultMeta">[{s.number}] {s.act_year}</p><h3>{s.title}</h3><p className="resultHeading">Section {s.provision_number} {s.heading}</p><p className="resultExcerpt">{s.excerpt}…</p><a href={s.url} target="_blank" rel="noopener noreferrer">Official enacted Act ↗</a></article>)}
+  </section>}
+ </main>;
 }
