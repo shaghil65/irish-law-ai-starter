@@ -39,7 +39,7 @@ def import_directory(root: Path, dsn: str, strict: bool = False) -> dict:
     paths = sorted(root.glob("*/act-*.xml"))
     if not paths:
         raise ValueError(f"No XML files found under {root}")
-    results = {"imported": 0, "failed": 0, "provisions": 0}
+    results = {"imported": 0, "skipped": 0, "failed": 0, "provisions": 0}
     with psycopg.connect(dsn, autocommit=True) as conn:
         conn.execute(SCHEMA.read_text(encoding="utf-8"))
         for path in paths:
@@ -47,6 +47,14 @@ def import_directory(root: Path, dsn: str, strict: bool = False) -> dict:
                 act = parse(path)
                 if not act.provisions:
                     raise ValueError("No structural provisions found; check XML format")
+                existing = conn.execute(
+                    "SELECT sha256 FROM legislation_documents WHERE canonical_uri=%s",
+                    (act.canonical_uri,)
+                ).fetchone()
+                if existing and existing[0] == act.sha256:
+                    results["skipped"] += 1
+                    LOG.info("Unchanged, skipping: %s", act.source_url)
+                    continue
                 upsert(conn, act)
                 results["imported"] += 1
                 results["provisions"] += len(act.provisions)

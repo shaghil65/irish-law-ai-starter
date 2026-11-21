@@ -1,0 +1,7 @@
+services:
+  backend:
+    volumes:
+      - ./backend:/ingestion-source:ro
+      - ./data:/data
+    environment:
+      PYTHONPATH: /ingestion-source

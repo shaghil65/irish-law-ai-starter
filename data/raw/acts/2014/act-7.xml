@@ -1,0 +1,691 @@
+<?xml version="1.0"?>
+<act><metadata><title>Fines (Payment and Recovery) Act 2014</title><number>7</number><year>2014</year>
+<dateofenactment>20140416</dateofenactment></metadata>
+<frontmatter>
+<p class="0 0 0 center 1 0" just="left"><graphic href="harp.jpg" quality="GOOD"/></p>
+<p class="0 0 0 center 1 0"><hr1/></p>
+<actnumber><p class="0 0 0 center 1 0" just="left"><i>Number </i>7 <i>of </i>2014</p></actnumber>
+<p class="0 0 0 center 1 0"><hr1/></p>
+<p class="0 0 0 center 1 0" just="left">
+<b>FINES (PAYMENT AND RECOVERY) ACT 2014</b></p>
+<p class="0 0 0 center 1 0"><hr1/></p>
+<acttoc>
+<p class="0 0 0 center 1 0" just="left">CONTENTS</p>
+<p class="2 10 0 left 1 0" just="left"> <xref show="replace" href="PART1" value1="Part 1" xml:link="simple">PART 1</xref></p>
+<p class="0 0 0 center 1 0" just="center"> <font size="normal" smallcaps="yes">Preliminary and General</font></p>
+<p class="2 10 0 left 1 0" just="left">Section</p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC1" value1="1.\u2014" xml:link="simple">1. Short title and commencement</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC2" value1="2.\u2014" xml:link="simple">2. Interpretation</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC3" value1="3.\u2014" xml:link="simple">3. Orders and regulations</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC4" value1="4.\u2014" xml:link="simple">4. Repeals</xref></p>
+<p class="2 10 0 left 1 0" just="left"> <xref show="replace" href="PART2" value1="Part 2" xml:link="simple">PART 2</xref></p>
+<p class="0 0 0 center 1 0" just="center"> <font size="normal" smallcaps="yes">Capacity to Pay Fine, Payment of Fine by Instalments and Failure to Pay Fine</font></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC5" value1="5.\u2014" xml:link="simple">5. Capacity of person to pay fine</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">6. Option of fined person to pay fine by single payment or instalments</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">7. Failure to pay fine by due date</xref></p>
+<p class="2 10 0 left 1 0" just="left"> <xref show="replace" href="PART3" value1="Part 3" xml:link="simple">PART 3</xref></p>
+<p class="0 0 0 center 1 0" just="center"> <font size="normal" smallcaps="yes">Recovery Orders</font></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC8" value1="8.\u2014" xml:link="simple">8. Appointment of receiver in default of payment of fine</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC9" value1="9.\u2014" xml:link="simple">9. Provisions supplementary to section 8</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC10" value1="10.\u2014" xml:link="simple">10. Approval by Government of persons for appointment under section 8(1) </xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC11" value1="11.\u2014" xml:link="simple">11. Failure to recover fine, etc., by use of receiver</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC12" value1="12.\u2014" xml:link="simple">12. Cesser of recovery order</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC13" value1="13.\u2014" xml:link="simple">13. Monies recovered by receiver</xref></p>
+<p class="2 10 0 left 1 0" just="left"> <xref show="replace" href="PART4" value1="Part 4" xml:link="simple">PART 4</xref></p>
+<p class="0 0 0 center 1 0" just="center"> <font size="normal" smallcaps="yes">Attachment Orders</font></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC14" value1="14.\u2014" xml:link="simple">14. Attachment order</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC15" value1="15.\u2014" xml:link="simple">15. Compliance with attachment order</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC16" value1="16.\u2014" xml:link="simple">16. Notification of changes of employment and employment status</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC17" value1="17.\u2014" xml:link="simple">17. Cesser of attachment order</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC18" value1="18.\u2014" xml:link="simple">18. Monies recovered by attachment order</xref></p>
+<p class="2 10 0 left 1 0" just="left"> <xref show="replace" href="PART5" value1="Part 5" xml:link="simple">PART 5</xref></p>
+<p class="0 0 0 center 1 0" just="center"> <font size="normal" smallcaps="yes">Community Service Orders and Imprisonment in Default of Payment of Fine</font></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC19" value1="19.\u2014" xml:link="simple">19. Community service order in default of payment of fine</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC20" value1="20.\u2014" xml:link="simple">20. Imprisonment in default of payment of fine</xref></p>
+<p class="2 10 0 left 1 0" just="left"> <xref show="replace" href="PART6" value1="Part 6" xml:link="simple">PART 6</xref></p>
+<p class="0 0 0 center 1 0" just="center"> <font size="normal" smallcaps="yes">Miscellaneous</font></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC21" value1="21.\u2014" xml:link="simple">21. Service of notices</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC22" value1="22.\u2014" xml:link="simple">22. Amendment of Courts (No. 2) Act 1991</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC23" value1="23.\u2014" xml:link="simple">23. Data sharing and exchange</xref></p>
+<p class="-1 16 0 left 1 0">
+<xref show="replace" href="SEC24" value1="24.\u2014" xml:link="simple">24. Application of monies where only part of fine is paid</xref></p>
+</acttoc>
+<p class="0 6 4 center 1 0" just="left"><hr1/>
+</p>
+<actsreferredto>
+<title>
+<p class="0 0 0 center 1 0" just="left">
+Acts Referred to
+</p>
+</title>
+<p class="2 10 0 left 1 0" just="left">Companies Acts </p>
+<p class="2 10 0 left 1 0" just="left">Court Officers Act 1945 (No. 25)</p>
+<p class="2 10 0 left 1 0" just="left">Courts (No. 2) Act 1986 (No. 26)</p>
+<p class="2 10 0 left 1 0" just="left">Courts (No. 2) Act 1991 (No. 21)</p>
+<p class="2 10 0 left 1 0" just="left">Courts and Court Officers Act 2009 (No. 36)</p>
+<p class="2 10 0 left 1 0" just="left">Criminal Justice (Community Service) Act 1983 (No. 23)</p>
+<p class="2 10 0 left 1 0" just="left">Criminal Justice Act 2006 (No. 26)</p>
+<p class="2 10 0 left 1 0" just="left">Criminal Justice Administration Act 1914 (Geo 4 &amp; 5, c.58)</p>
+<p class="2 10 0 left 1 0" just="left">Electronic Commerce Act 2000 (No. 27)</p>
+<p class="2 10 0 left 1 0" just="left">Employment Agency Act 1971 (No. 27)</p>
+<p class="2 10 0 left 1 0" just="left">Ethics in Public Office Act 1995 (No. 22)</p>
+<p class="2 10 0 left 1 0" just="left">Fines Act 2010 (No. 8)</p>
+<p class="2 10 0 left 1 0" just="left">Petty Sessions (Ireland) Act 1851 (14 &amp; 15 Vict., c. 93)</p>
+<p class="2 10 0 left 1 0" just="left">Social Welfare Consolidation Act 2005 (No. 26)</p>
+</actsreferredto>
+
+<p class="0 0 0 center 1 0" just="left"><graphic href="harp.jpg" quality="GOOD"/>
+</p>
+<p class="0 6 4 center 1 0" just="left"><hr1/>
+</p>
+
+<actnumber>
+<p class="0 0 0 center 1 0" just="left"><i>Number</i> 7 <i>of</i> 2014
+</p>
+</actnumber>
+<p class="0 6 4 center 1 0" just="left"><hr1/>
+</p>
+
+<p class="0 0 0 center 1 0" just="left">
+<b>FINES (PAYMENT AND RECOVERY) ACT 2014</b>
+</p>
+
+<p class="0 6 4 center 1 0" just="left"><hr1/>
+</p>
+<p class="0 0 0 justify 1 0" just="left">An Act to provide for the payment and recovery of fines imposed on persons convicted of offences; to provide that the court imposing any such fine on such a person shall take into account the person<csq/>s financial circumstances; to provide for the making of community service orders in respect of such persons, or the commitment to imprisonment of such persons, in certain circumstances where such fines imposed on them are not paid; to consequentially repeal or amend other enactments; and to provide for related matters. [16 <i>th April</i>, 2014]</p>
+<p class="-1 16 0 left 1 0"><b>
+Be it enacted by the Oireachtas as follows:</b></p>
+</frontmatter>
+<body>
+<part id="PART1">
+<title>
+<p class="0 0 0 center 1 0"><font size="large" smallcaps="no">PART 1</font></p>
+<p class="0 0 0 center 1 0" just="center"><font size="normal" smallcaps="yes">
+Preliminary and General
+</font></p></title>
+<sect id="SEC1">
+<number>1.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Short title and commencement</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>1.</b> (1) This Act may be cited as the Fines (Payment and Recovery) Act 2014.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) This Act shall come into operation on such day or days as the Minister may appoint by order or orders either generally or with respect to any particular purpose or provision and different days may be so appointed for different purposes or provisions.</p>
+</sect>
+
+<sect id="SEC2">
+<number>2.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Interpretation</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>2.</b> (1) In this Act<emdash/> <odq/>Act of 1983<cdq/> means the 
+Criminal Justice (Community Service) Act 1983;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>Act of 1986<cdq/> means the Courts (No. 2) Act 1986;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>administration fee<cdq/> means the administration fee referred to in <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(4)</i> required to be paid by a fined person who has opted to pay the fine by instalments under <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(1)(a)(ii)</i>;</p>
+<p class="0 10 0 left 1 0" just="left"><odq/>appropriate court official<cdq/><emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) in relation to a fine imposed by the District Court, means the district court clerk for the district court area in which the fine was imposed,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) in relation to a fine imposed by the Circuit Court, means the county registrar for the county in which the fine was imposed or, if a combined court office has been established under the Courts and Court Officers Act 2009 in respect of that county, the manager of that combined court office,</p>
+<p class="-3 15 0 left 1 0" just="left">(c) in relation to a fine imposed by the High Court, means the principal officer serving in the Central Office attached to the High Court who manages such Central Office, and</p>
+<p class="-3 15 0 left 1 0" just="left">(d) in relation to a fine imposed by the Central Criminal Court, means the registrar of the Central Criminal Court;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>attachment order<cdq/> means an order under <i><xref show="replace" href="SEC14" value1="14.\u2014" xml:link="simple">section 14</xref>(1)</i>, including such an order as varied under <i><xref show="replace" href="SEC14" value1="14.\u2014" xml:link="simple">section 14</xref>(4)(a)</i>;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>community service order<cdq/> shall be construed in accordance with section 3(1A) (inserted by <i><xref show="replace" href="SEC19" value1="14.\u2019" xml:link="simple">section 19</xref>(1)(c)(i)</i>) of the Act of 1983;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>contract of employment<cdq/> means<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) a contract of service or apprenticeship, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) any other contract whereby an individual agrees with another person, who is carrying on the business of an employment agency within the meaning of the Employment Agency Act 1971 and is acting in the course of that business, to do or perform personally any work or service for a third person (whether or not the third person is a party to the contract);</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>due date for payment<cdq/>, in relation to a fine, means<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) if the fined person has opted to pay the full fine under <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(1)(a)(i)</i>, the date by which the fine is required to be paid in accordance with the order of the court that imposed the fine, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) if the fined person has opted to pay the fine by instalments under <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(1)(a)(ii)</i>, in respect of each such instalment, the date by which the instalment is required to be paid;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>employer<cdq/>, in relation to a fined person, means a person who employs the fined person under a contract of employment, and includes a trustee of a pension scheme under which the fined person receives periodical pension benefits;</p> 
+<p class="2 10 0 left 1 0" just="left"><odq/>enactment<cdq/> has the meaning assigned to it by section 3 of the Fines Act 2010;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>financial circumstances<cdq/>, in relation to a person who has been convicted of an offence, means<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the amount of the person<csq/>s annual income,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the aggregate value of all property (real and personal) belonging to the person,</p>
+<p class="-3 15 0 left 1 0" just="left">(c) the aggregate amount of all liabilities of the person including any duty (moral or legal) to provide financially for members of his or her family or other persons,</p>
+<p class="-3 15 0 left 1 0" just="left">(d) the aggregate of all monies owing to the person, the dates upon which they fall due to be paid and the likelihood of their being paid, and</p>
+<p class="-3 15 0 left 1 0" just="left">(e) such other circumstances as the court considers appropriate;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>fine<cdq/> means a fine imposed by a court on a person consequent upon his or her being convicted of an offence by that court, and includes any costs, compensation or expenses, in addition to the fine, that the court orders the person to pay;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>fined person<cdq/> means a person on whom a court has imposed a fine and, in relation to a recovery order or attachment order, means such person the subject of the order;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>Minister<cdq/> means the Minister for Justice and Equality;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>personal public service number<cdq/> has the meaning assigned to it by section 262 of the Social Welfare Consolidation Act 2005;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>prescribed<cdq/> means prescribed by regulations made by the Minister;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>receiver<cdq/> means an approved person or sheriff appointed under <i><xref show="replace" href="SEC8" value1="8.\u2014" xml:link="simple">section 8</xref>(1)(a)</i> and, in relation to a fined person, means the person who has been so appointed in respect of the fined person;</p> 
+<p class="0 10 0 left 1 0" just="left"><odq/>recovery order<cdq/> means an order under <i><xref show="replace" href="SEC8" value1="8.\u2014" xml:link="simple">section 8</xref>(1)(a)</i> and, in relation to a receiver, means such order under which the receiver is appointed.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Subject to <i>subsection (3)</i>, where a fined person has opted to pay the fine by instalments under <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(1)(a)(ii)</i>, references in this Act to the payment of the fine include references to the payment of the related administration fee, and the other provisions of this Act shall, with all necessary modifications, be construed accordingly, except that all monies applied towards any such payment shall, for the purposes of this Act, be treated as being applied towards the payment of the fine and, after the fine has been paid in full, only then towards the payment of the administration fee.</p>
+<p class="-3 13 0 left 1 0" just="left">(3)<i> Subsection (2)</i> does not apply in any case where a court is, under a provision of this Act, considering, in respect of a fined person where all or part of the fine has not been paid, making a community service order in respect of the person or committing the person to prison in accordance with section 2 or 2A of the Act of 1986.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) For the purposes of this Act<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the person by whom an employee of a public body, within the meaning of the Ethics in Public Office Act 1995, is paid in accordance with the employee<csq/>s contract of employment with that public body is deemed to be the employee<csq/>s employer, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) a person who is otherwise a member of staff of a public body, within the meaning of the Ethics in Public Office Act 1995, is deemed to be employed under a contract of employment, and the person by whom he or she is paid in accordance with the terms and conditions of his or her service is deemed to be his or her employer.</p>
+</sect>
+
+<sect id="SEC3">
+<number>3.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Orders and regulations</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>3. </b>(1) The Minister may by regulations<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) provide for any matter referred to in this Act as prescribed or to be prescribed,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) prescribe the forms to be used to exercise an option to pay a fine by instalments under <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(1)(a)(ii)</i>.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Without prejudice to any provision of this Act, regulations under this section may contain such incidental, supplementary and consequential provisions as appear to the Minister to be necessary or expedient for the purposes of the regulations.</p>
+<p class="-3 13 0 left 1 0" just="left">(3) Every order (other than an order under <i><xref show="replace" href="SEC1" value1="1.\u2014" xml:link="simple">section 1</xref>(2)</i>) and regulation made by the Minister under this Act shall be laid before each House of the Oireachtas as soon as may be after it is made and, if a resolution annulling the order or regulation is passed by either such House within the next 21 days on which that House sits after the order or regulation is laid before it, the order or regulation shall be annulled accordingly, but without prejudice to the validity of anything previously done thereunder.</p>
+</sect>
+
+<sect id="SEC4">
+<number>4.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Repeals</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>4. </b> The following enactments are repealed:</p>
+<p class="-3 15 0 left 1 0" just="left">(a) section 43(2) of the Criminal Justice Administration Act 1914;</p>
+<p class="-3 15 0 left 1 0" just="left">(b) section 195 of the Criminal Justice Act 2006; and</p>
+<p class="-3 15 0 left 1 0" just="left">(c) Part 3 of the Fines Act 2010.</p>
+</sect>
+</part>
+
+<part id="PART2"><title>
+<p class="0 0 0 center 1 0"><font size="large" smallcaps="no">PART 2</font></p>
+<p class="0 0 0 center 1 0" just="center"><font size="normal" smallcaps="yes">
+Capacity to Pay Fine, Payment of Fine by Instalments and Failure to Pay Fine
+</font></p></title>
+<sect id="SEC5">
+<number>5.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Capacity of person to pay fine</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>5. </b>(1) The purpose of this section is to ensure, in so far as is practicable, that, where a court imposes a fine on a person, the effect of the fine on that person or his or her dependants is not significantly abated or made more severe by reason of his or her financial circumstances.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Where a person of full age is convicted of an offence, the court shall, in determining the amount of the fine (if any) to impose in respect of the offence, take into account the person<csq/>s financial circumstances.</p>
+<p class="-5 15 0 left 1 0" just="left">(3) (a) For the purpose of this section, a court may, in making a determination under <i>subsection (2)</i>, impose a fine on a person that is greater than, less than or equal to the fine that the court would be minded to impose on the person in respect of the offence concerned if it were not required to take into account the person<csq/>s financial circumstances.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) A court shall not, in any case, impose a fine that is<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) greater than the maximum fine (if any), or</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) less than the minimum fine (if any),</p>
+<p class="0 15 0 left 1 0" just="left">to which a person would be liable upon conviction of the offence concerned.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) Where<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) a court has convicted a person of an offence in his or her absence, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) a person who has been convicted of an offence fails or refuses to provide the court with information as to his or her financial circumstances, the court shall impose such fine as it considers appropriate in respect of the offence taking into account such information (if any) as is known to the court concerning those circumstances.</p>
+<p class="-3 13 0 left 1 0" just="left">(5) For the purposes of <i>subsection (2)</i>, the court may, by notice in writing served on a person who has been convicted of an offence, require the person to attend before the court and provide the court with such information as the court may require in relation to his or her financial circumstances.</p>
+<p class="-3 13 0 left 1 0" just="left">(6) A person who knowingly or recklessly makes a statement (orally or in writing) in relation to his or her, or another person<csq/>s, financial circumstances that is false or misleading in any material respect to a court discharging its function under <i>subsection (2)</i> shall be guilty of an offence and shall be liable, on summary conviction, to a class B fine or imprisonment for a term not exceeding 6 months, or both.</p>
+<p class="-3 13 0 left 1 0" just="left">(7) A person who fails or refuses to comply with a notice under <i>subsection (5)</i> served on him or her shall be guilty of an offence and shall be liable, on summary conviction, to a class B fine or imprisonment for a term not exceeding 6 months, or both.</p>
+<p class="-3 13 0 left 1 0" just="left">(8) This section does not apply in relation to the imposition of a fine where the court has no discretion in the determination of the amount of the fine.</p>
+</sect>
+
+<sect id="SEC6">
+<number>6.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Option of fined person to pay fine by single payment or instalments</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>6. </b>(1) Subject to <i>subsection (5)</i>, a fined person may, at his or her option, effect the payment of the fine by<emdash/></p>
+<p class="-6 18 0 left 1 0" just="left">(a) (i) a single payment made on or before the relevant date for payment, or</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) the payment of instalments<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(I) calculated in such manner as may be prescribed, and</p>
+<p class="-3 21 0 left 1 0" just="left">(II) at such frequency as may be prescribed,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) such means as may be prescribed for making such payment, and</p>
+<p class="-3 15 0 left 1 0" just="left">(c) making such payment to such person as may be prescribed.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Where a fined person exercises his or her option to pay the fine by instalments under <i>subsection (1)(a)(ii)</i>, the person shall pay the first instalment of the fine on or before the relevant date for payment and the final instalment of the fine not later than 12 months after the relevant date for payment.</p>
+<p class="-3 13 0 left 1 0" just="left">(3) A court shall, when imposing a fine on a person, inform the fined person of the 2 options available to the person under <i>subsection (1)(a)</i>.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) Where a fined person exercises his or her option to pay the fine by instalments under <i>subsection (1)(a)(ii)</i>, he or she is also required to pay such administration fee, not exceeding 10 per cent of the value of the fine, as may be prescribed.</p>
+<p class="-5 15 0 left 1 0" just="left">(5) (a) The option to pay a fine by instalments under <i>subsection (1)(a)(ii)</i> shall only apply in respect of<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) a fine that exceeds such amount greater than <euro/>100 as may be prescribed, or</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) if no such amount stands prescribed, a fine that exceeds <euro/>100.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) Where 2 or more fines are imposed on a person at a court sitting and the option to pay any one or more of those fines by instalments is not available because of the operation of <i>paragraph (a)</i>, the court may, in its order specifying the date by which such a fine is required to be paid in respect of which such option is not available, specify, if it thinks it appropriate in all the circumstances, a date that is later than the date it would have specified if that option had been available in respect of that fine but not taken by the fined person.
+</p>
+<p class="-3 13 0 left 1 0" just="left">(6) In this section <odq/>relevant date for payment<cdq/>, in relation to a fine, means<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) if the fined person has opted to pay the full fine under <i>subsection (1)(a)(i)</i>, the date by which the fine is required to be paid in accordance with the order of the court that imposed the fine, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) if the fined person has opted to pay the fine by instalments under <i>subsection (1)(a)(ii)</i>, 42 days from the date on which the fine was imposed.</p>
+</sect>
+
+<sect id="SEC7">
+<number>7.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Failure to pay fine by due date</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>7. </b>(1) Subject to <i>subsections (3)</i> and <i>(5)</i>, where a fined person fails to pay the fine by the due date for payment, the court shall, at the sitting of the court on the date specified in the notice concerned under <i>subsection (4)</i> served on the person (unless the person has paid the fine on or before that date)<emdash/>
+</p>
+<p class="-3 15 0 left 1 0" just="left">(a) subject to <i>subsection (2)</i>, make a recovery order,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) make an attachment order, or</p>
+<p class="-3 15 0 left 1 0" just="left">(c) make a community service order if section 4 of the Act of 1983 has been complied with.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) The court shall not make a recovery order in respect of the fined person (not being a body corporate) unless the fine or, as may be appropriate, that part of the fine that remains unpaid<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) exceeds such amount greater than <euro/>500 as may be prescribed, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) if no such amount stands prescribed, exceeds <euro/>500.
+</p>
+<p class="-3 13 0 left 1 0" just="left">(3) Where a fined person who has exercised his or her option under <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(1)(a)(ii)</i> to pay the fine by instalments fails to pay any such instalment (in this subsection referred to as the <odq/>relevant instalment<cdq/>) by the due date for payment, it is not necessary for the court to take action under this section in respect of the failure unless<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) there are 2 other failures by the fined person to pay that fine by instalments by the due date for payment, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the relevant instalment has still not been paid when all other instalments have been paid.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) The appropriate court official concerned shall, by notice in writing served on the fined person, require the person to appear before the court on the date and at the time specified in the notice, and to provide to the court a statement in writing of his or her financial circumstances.
+</p>
+<p class="-5 15 0 left 1 0" just="left">(5) (a) The court shall, after considering a statement provided to it pursuant to <i>subsection (4)</i> in deciding what order to make under <i>subsection (1)</i><emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) first, give consideration to making an attachment order in respect of the fined person, and</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) second, if it is satisfied that it would not be appropriate for it to make an attachment order in respect of the fined person, give consideration to making, subject to <i>subsection (2)</i>, a recovery order or community service order in respect of the fined person.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) Where the court is satisfied that it would not be appropriate for it to make an attachment order, recovery order or community service order in respect of the fined person, it may commit the person to prison in accordance with section 2 or 2A of the Act of 1986.
+</p>
+<p class="-3 13 0 left 1 0" just="left">(6) A notice under <i>subsection (4)</i> shall<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) inform the fined person of the orders that the court may make under <i>subsection (1)</i> in respect of the person and of the court<csq/>s power under <i>subsection (5)</i> to commit the person to prison, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) state that a warrant may be issued for the arrest of the fined person if he or she fails to appear before the court as required by the notice.</p>
+<p class="-3 13 0 left 1 0" just="left">(7) Where a fined person fails, without reasonable excuse, to appear before the court as required by a notice under <i>subsection (4)</i>, the court shall, if satisfied that the notice was served on the person<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) issue a warrant for the arrest of the person, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) if the court thinks it appropriate in all the circumstances, cause a further notice under <i>subsection (4)</i> to be served on the person specifying a new date for the person to appear before the court, and to provide it with the statement referred to in that subsection.</p>
+<p class="-3 13 0 left 1 0" just="left">(8) A fined person arrested under <i>subsection (7)(a)</i> shall be brought before the next sitting of the court.</p>
+<p class="-3 13 0 left 1 0" just="left">(9) A fined person who knowingly or recklessly makes a statement, in purported compliance with a notice under <i>subsection (4)</i>, that is false or misleading in any material respect shall be guilty of an offence and shall be liable, on summary conviction, to a class B fine or imprisonment for a term not exceeding 6 months, or both.</p>
+<p class="-3 13 0 left 1 0" just="left">(10) Rules of court shall prescribe the form of a statement referred to in <i>subsection (4)</i>.</p>
+</sect>
+</part>
+
+<part id="PART3"><title>
+<p class="0 0 0 center 1 0"><font size="large" smallcaps="no">PART 3</font></p>
+<p class="0 0 0 center 1 0" just="center"><font size="normal" smallcaps="yes">
+Recovery Orders
+</font></p></title>
+<sect id="SEC8">
+<number>8.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Appointment of receiver in default of payment of fine</b></p>
+</title>
+<p class="-6 15 0 left 0 0" just="left"><b>8.</b> (1) (a) Subject to <i><xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">section 7</xref>(2)</i>, where a fined person fails to pay the fine by the due date for payment, the court may, at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">section 7</xref>(4)</i> served on the person, make an order appointing an approved person or sheriff to carry out the functions set out in <i>paragraph (b)</i>.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) The receiver shall<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) recover from the fined person<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(I) the fine or, as may be appropriate, that part of the fine that, upon the notice under <i>subsection (2)</i> being given to the receiver, remains unpaid, and</p>
+<p class="-3 21 0 left 1 0" just="left">(II) the fees and expenses of the receiver,</p>
+<p class="-3 15 0 left 1 0" just="left">or</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) seize and sell property belonging to the fined person and recover from the proceeds of the sale of that property a sum equal to the amount of<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(I) the fine or, as may be appropriate, that part of the fine that, upon the notice under <i>subsection (2)</i> being given to the receiver, remains unpaid, and</p>
+<p class="-3 21 0 left 1 0" just="left">(II) the fees and expenses of the receiver.</p>
+<p class="-5 15 0 left 1 0" just="left">(2) (a) The Courts Service shall give notice to the receiver of the making of the recovery order by giving a copy of the order to the receiver.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) The recovery order shall take effect from the day immediately following the day on which the notice under <i>paragraph (a)</i> is given.</p>
+<p class="-3 13 0 left 1 0" just="left">(3) The recovery order shall authorise the receiver (alone or accompanied by such and so many members of the Garda S<ifada/>och<afada/>na as he or she considers necessary) to<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) enter (if necessary by the use of reasonable force) any premises, including a dwelling, at which he or she has reasonable grounds for believing property belonging to the fined person is located,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) demand, and take possession of (if necessary, by the use of reasonable force) any property that belongs to the fined person,</p>
+<p class="-3 15 0 left 1 0" just="left">(c) issue receipts in respect of any property of which the receiver has taken possession,</p>
+<p class="-3 15 0 left 1 0" just="left">(d) manage, dispose of, retain or otherwise deal with the property,</p>
+<p class="-3 15 0 left 1 0" just="left">(e) insure the property, and</p>
+<p class="-3 15 0 left 1 0" just="left">(f) inspect, at all reasonable times, any books, documents or other records that contain information relating to property belonging to the fined person.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) The receiver shall perform his or her functions subject to any directions or conditions specified in the recovery order, including any directions or conditions relating to the payment into court by the receiver of amounts received by him or her pursuant to the order.</p>
+<p class="-3 13 0 left 1 0" just="left">(5) The receiver may delegate such of his or her functions under <i>subsection (3)</i> as he or she thinks appropriate to his or her employees, servants or bailiffs.</p>
+<p class="-3 13 0 left 1 0" just="left">(6) The receiver may, at any time after he or she is given the notice under <i>subsection (2)</i>, apply to the court that made the recovery order for directions in relation to the performance of his or her functions under this Act.</p>
+<p class="-3 13 0 left 1 0" just="left">(7) Any person who is in possession of property belonging to the fined person shall deliver that property to the receiver upon the receiver making a demand of him or her in that behalf.</p>
+<p class="-5 15 0 left 1 0" just="left">(8) (a) Where the receiver sells property belonging to the fined person and the proceeds of the sale exceed the amount of the fine or the amount of the fine remaining unpaid, as the case may be, the receiver shall pay to that person so much of those proceeds as exceeds that amount.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) In this subsection <odq/>fine<cdq/> includes the fees and expenses of the receiver.</p>
+<p class="-3 13 0 left 1 0" just="left">(9) A person who<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) fails to comply with <i>subsection (7)</i>,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) obstructs or interferes with the receiver in the course of the performance by him or her of his or her functions or otherwise impedes the performance by the receiver of those functions, or</p>
+<p class="-3 15 0 left 1 0" just="left">(c) obstructs or interferes with a person to whom the receiver has delegated any of his or her functions under <i>subsection (5)</i> in the course of the performance by that person of any such functions so delegated or otherwise impedes the performance by that person of those functions, shall be guilty of an offence and shall be liable, on summary conviction, to a class A fine or imprisonment for a term not exceeding 12 months, or both.</p>
+<p class="-5 15 0 left 1 0" just="left">(10) (a) The Minister may, by order, specify<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) the fees that a receiver may deduct from any sum or sums recovered by him or her, or obtained from the proceeds of the sale of any property by him or her, in accordance with this section, or</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) the rates at which fees that may be so deducted shall be calculated.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) The Minister shall not make an order under this subsection without the consent of the Minister for Public Expenditure and Reform.</p>
+<p class="-3 13 0 left 1 0" just="left">(11) The receiver shall make and maintain a record in writing of<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the fees deducted, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the expenses incurred and deducted, by him or her from the sum or sums recovered, or the proceeds of the sale of any property sold, by him or her pursuant to the recovery order.</p>
+<p class="-3 13 0 left 1 0" just="left">(12) The receiver shall, not later than 6 months after the performance by him or her of his or her functions pursuant to the recovery order, give to the Courts Service the record required to be made and maintained under <i>subsection (11)</i> relating to that order.</p>
+<p class="-3 13 0 left 1 0" just="left">(13) Where the receiver makes, or causes to be made, an entry in a record required to be made and maintained under <i>subsection (11)</i> that<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) is false or misleading in any material respect, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) he or she knows to be false or misleading, he or she shall be guilty of an offence.</p>
+<p class="-3 13 0 left 1 0" just="left">(14) A receiver who is guilty of an offence under <i>subsection (13)</i> shall be liable<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) on summary conviction, to a class A fine or imprisonment for a term not exceeding 12 months, or both, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) on conviction on indictment, to a fine not exceeding <euro/>50,000 or imprisonment for a term not exceeding 5 years, or both.</p>
+<p class="-3 13 0 left 1 0" just="left">(15) A record required to be made and maintained under <i>subsection (11)</i> shall be in such form as the Courts Service shall determine.</p>
+<p class="-3 13 0 left 1 0" just="left">(16) In this section<emdash/></p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>approved person<cdq/> means a person approved under <i><xref show="replace" href="SEC10" value1="10.\u2014" xml:link="simple">section 10</xref></i> for appointment under <i>subsection (1)</i>;</p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>expenses<cdq/>, in relation to a receiver, means the expenses reasonably incurred by the receiver in the performance of his or her functions;</p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>fees<cdq/>, in relation to a receiver, means the fees of the receiver that may be deducted in accordance with any order under <i>subsection (10)</i>;</p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>property<cdq/> means land or personal property;</p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>sheriff<cdq/> means a sheriff appointed by the Government under the Court Officers Act 1945.</p>
+</sect>
+
+<sect id="SEC9">
+<number>9.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Provisions supplementary to <i>section 8</i></b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>9. </b>(1) For the purposes of this section<emdash/></p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>electronic<cdq/> has the meaning assigned to it by the Electronic Commerce Act 2000 and <odq/>electronic notice<cdq/> shall be construed accordingly;</p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>issued in a non-paper format<cdq/> includes issued in facsimile;</p> 
+<p class="0 15 0 left 1 0" just="left"><odq/>notice<cdq/> means the copy of the recovery order given to the receiver under <i><xref show="replace" href="SEC8" value1="8.\u2014" xml:link="simple">section 8</xref>(2)(a)</i>. </p>
+<p class="-3 13 0 left 1 0" just="left">(2) A notice may<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) be given in an electronic or other format, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) where the notice is given in a non-paper format, be reproduced in a paper format by the receiver or by a person authorised by the receiver to do so (in this section referred to as an <odq/>authorised person<cdq/>).</p>
+<p class="-3 13 0 left 1 0" just="left">(3) A notice given in a non-paper format in accordance with <i>subsection (2)</i> shall<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) constitute a valid notice for the purposes of <i><xref show="replace" href="SEC8" value1="8.\u2014" xml:link="simple">section 8</xref>(2)</i>,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) be deemed to have been made by the court, and</p>
+<p class="-3 15 0 left 1 0" just="left">(c) be deemed to have been given on the date that the notice was given to the receiver.</p>
+<p class="-5 15 0 left 1 0" just="left">(4) (a) Where a notice is reproduced in a paper format in accordance with <i>subsection (2)(b)</i> and<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) the reproduction contains, or there is appended to it, a note to the effect that it is a copy of the notice, and</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) the note contains the signature of the receiver or of an authorised person and the date of such signing,</p>
+<p class="0 15 0 left 1 0" just="left">then the copy of the notice with the note so signed and dated shall, for all purposes, have effect as if it were the notice itself.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) A signature or date in a note, on a copy of, or appended to, a notice given in a non-paper format, and reproduced in a paper format in accordance with <i>subsection (2)(b)</i>, that<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) in respect of such signature, purports to be that of the receiver or of an authorised person, shall be taken, unless the contrary is shown, to be the signature of the receiver or of, at the material time, an authorised person, and</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) in respect of such date, shall be taken, unless the contrary is shown, to have been duly dated.</p>
+</sect>
+
+<sect id="SEC10">
+<number>10.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Approval by Government of persons for appointment under <i>section 8(1)</i></b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>10.</b> (1) The Government may, upon the nomination of the Minister, approve persons for appointment under <i><xref show="replace" href="SEC8" value1="8.\u2014" xml:link="simple">section 8</xref>(1)</i>.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) The Minister shall not make a nomination under this section without the consent of the Minister for Public Expenditure and Reform.</p>
+<p class="-3 13 0 left 1 0" just="left">(3) The Government may attach such conditions to an approval under this section as it considers appropriate.</p>
+</sect>
+
+<sect id="SEC11">
+<number>11.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Failure to recover fine, etc., by use of receiver</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>11.</b> (1) Where the receiver determines that he or she has been unable to recover<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the fine,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) if the fined person has exercised his or her option to pay the fine by instalments under <i><xref show="replace" href="SEC6" value1="6.\u2014" xml:link="simple">section 6</xref>(1)(a)(ii)</i>, the balance of the fine outstanding, or</p>
+<p class="-3 15 0 left 1 0" just="left">(c) a sum or sums from the sale of property belonging to the fined person sufficient to pay the fine or the balance of the fine outstanding, as the case may be, he or she shall give notice in writing to the court that imposed the fine of that inability and of the name of the fined person.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Where the court is given a notice under <i>subsection (1)</i>, the appropriate court official concerned shall, by notice in writing served on the fined person, require the person to appear before the court on the date and at the time specified in the notice.</p>
+<p class="-3 13 0 left 1 0" just="left">(3) A notice under <i>subsection (2)</i> shall<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) state that the court may make a community service order in respect of the fined person and also state the conditions for the making of such an order under section 4 of the Act of 1983,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) state that the court may commit the fined person to prison in accordance with section 2 or 2A of the Act of 1986, and</p>
+<p class="-3 15 0 left 1 0" just="left">(c) state that the fined person may be arrested if he or she fails to appear before the court as required by the notice.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) Where a fined person fails, without reasonable excuse, to appear before the court as required by a notice issued under <i>subsection (2)</i>, the court shall, if satisfied that the notice was served on the person<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) issue a warrant for the arrest of the person, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) if the court thinks it appropriate in all the circumstances, cause a further notice under <i>subsection (2)</i> to be served on the person specifying a new date for the person to appear before the court.</p>
+<p class="-3 13 0 left 1 0" just="left">(5) A fined person arrested under <i>subsection (4)(a)</i> shall be brought before the next sitting of the court.</p>
+<p class="-3 13 0 left 1 0" just="left">(6) The court shall, at the sitting of the court on the date specified in the notice concerned served on the fined person under <i>subsection (2)</i> (unless the person has paid the fine on or before that date)<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) make a community service order in respect of the person; or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) commit the person to prison in accordance with section 2 or 2A of the Act of 1986.</p>
+</sect>
+
+<sect id="SEC12">
+<number>12.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Cesser of recovery order</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>12.</b> (1) At any time while the recovery order is in force, the fined person may elect to pay the remaining balance of the fine and, on so doing and if the payment is made other than to the receiver<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the order shall be deemed to have been revoked to the extent that it relates to the fine, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the Courts Service shall give notice in writing to the receiver of such revocation.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) The recovery order shall cease to have effect<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) on payment<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) into court of the full amount of the fine, and</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) to the receiver of his or her fees and expenses,</p>
+<p class="0 15 0 left 1 0" just="left">or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) subject to <i>subsection (3)</i>, upon the receiver giving the court a notice under <i><xref show="replace" href="SEC11" value1="11.\u2014" xml:link="simple">section 11</xref>(1)</i>.</p>
+<p class="-3 13 0 left 1 0" just="left">(3) Where the receiver has given the court a notice under <i><xref show="replace" href="SEC11" value1="11.\u2014" xml:link="simple">section 11</xref>(1)</i>, the recovery order shall continue to have effect in so far as it relates to<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) any part of the fine recovered by the receiver from the fined person that has not been paid into court before the notice was given,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) any property belonging to the fined person that has been seized by the receiver but not sold before the notice was given, and</p>
+<p class="-3 15 0 left 1 0" just="left">(c) any proceeds derived from the sale of property that have not been paid into court before the notice was given.</p>
+</sect>
+
+<sect id="SEC13">
+<number>13.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Monies recovered by receiver</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>13.</b> (1) Subject to <i>subsection (2)</i>, monies paid into court as a result of the appointment of a receiver shall be paid to the Minister for Finance and such monies shall then be paid to, or disposed of for the benefit of, the Exchequer in such manner as that Minister may direct.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Nothing in this Act shall prevent the payment of monies referred to in <i>subsection (1)</i> to a person other than the Minister for Finance under<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the Fines and Penalties (Disposal) Order 1943 (S.I. No. 115 of 1943), or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) any other enactment.</p>
+</sect>
+</part>
+
+<part id="PART4"><title>
+<p class="0 0 0 center 1 0"><font size="large" smallcaps="no">PART 4</font></p>
+<p class="0 0 0 center 1 0" just="center"><font size="normal" smallcaps="yes">Attachment Orders
+</font></p></title>
+<sect id="SEC14">
+<number>14.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Attachment order</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>14.</b> (1) Subject to <i>subsection (4)</i>, where a fined person who is employed under a contract of employment or in receipt of an occupational pension fails to pay the fine by the due date for payment, the court may, at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">section 7</xref>(4)</i> served on the person, make an order directing the person<csq/>s employer to<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) deduct from the fined person<csq/>s earnings the sums specified in the order, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) pay the sums so deducted, as contributions toward the payment of the fine, in the manner and within the period specified in the order.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Subject to <i>subsection (4)</i> and <i><xref show="replace" href="SEC16" value1="16.\u2014" xml:link="simple">section 16</xref>(1)(b)</i>, the amounts specified in the attachment order shall be such as to ensure that the fine is paid within 12 months of the date on which the order is effected unless the court, where it considers it appropriate to do so in the circumstances of the case, specifies a shorter period in the order (in which case that shorter period shall apply to such payment in respect of that order).</p>
+<p class="-3 13 0 left 1 0" just="left">(3) The court shall include the following particulars in the attachment order:</p>
+<p class="-3 15 0 left 1 0" just="left">(a) the fined person<csq/>s name;</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the fined person<csq/>s address;</p>
+<p class="-3 15 0 left 1 0" just="left">(c) the fined person<csq/>s personal public service number;</p>
+<p class="-3 15 0 left 1 0" just="left">(d) the name and address of the fined person<csq/>s employer;</p>
+<p class="-3 15 0 left 1 0" just="left">(e) such other information as the court has in its possession as would assist the employer in identifying the fined person;</p>
+<p class="-3 15 0 left 1 0" just="left">(f) the amounts to be deducted from the fined person<csq/>s earnings;</p>
+<p class="-3 15 0 left 1 0" just="left">(g) the date by which the first instalment shall be paid;</p>
+<p class="-3 15 0 left 1 0" just="left">(h) the frequency at which such amounts are to be paid; and</p>
+<p class="-3 15 0 left 1 0" just="left">(i) the method by which the amounts deducted are to be transferred to the court.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) Where the court is given a notice under <i><xref show="replace" href="SEC15" value1="15.\u2014" xml:link="simple">section 15</xref>(4)</i> by the employer of the fined person, it may, as appropriate<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) make an order (<odq/>variation order<cdq/>) varying the attachment order concerned to take account of what is stated in the notice and, in any such case<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) the appropriate court official shall cause the variation order to be served on that employer, and</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) <i>subsection (3)</i> of <i><xref show="replace" href="SEC15" value1="15.\u2014" xml:link="simple">section 15</xref></i> shall apply to the attachment order as so varied as if the reference in that subsection to <odq/>but is not liable for non-compliance before 10 working days have elapsed since the service of the order<cdq/> were a reference to <odq/>but is not liable for non-compliance before 10 working days have elapsed since the service of the variation order<cdq/>,</p>
+<p class="0 15 0 left 1 0" just="left">or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) revoke the attachment order concerned and, in any such case, the appropriate court official shall give notice in writing to the employer of such revocation.</p>
+</sect>
+
+<sect id="SEC15">
+<number>15.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Compliance with attachment order</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>15.</b> (1) The appropriate court official shall cause the attachment order to be served on the employer to whom it is directed.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) The service of the attachment order may be effected by leaving the attachment order or a copy of it at the employer<csq/>s residence or place of business in the State or by sending the order or a copy of it, by registered pre-paid post, to that residence or place of business.</p>
+<p class="-3 13 0 left 1 0" just="left">(3) The employer to whom the attachment order is directed shall comply with its terms, if it is served on him or her, but is not liable for non-compliance before 10 working days have elapsed since the service of the order.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) Where, at any time while the attachment order is in force, it comes to the attention of the employer to whom it is directed that the fined person<csq/>s earnings are, for whatever reason, insufficient to meet one or more than one deduction required to be made from those earnings in compliance with the order, the employer shall give notice in writing of that fact (including the circumstances which gave rise to that fact) to the court within 10 working days from the date that it comes to the employer<csq/>s attention that the fined person<csq/>s earnings are so insufficient.</p>
+<p class="-3 13 0 left 1 0" just="left">(5) Where the employer to whom the attachment order is directed is not the fined person<csq/>s employer at the time when the service of the order is effected, the employer shall give notice of that fact to the court within 10 working days from the service of the order.</p>
+<p class="-3 13 0 left 1 0" just="left">(6) Where, at any time while the attachment order is in force, the employer to whom it is directed ceases to be the fined person<csq/>s employer, the employer shall give notice in writing of that fact to the court within 10 working days from the date that the fined person ceases to be in his or her employment, and pay to the court any sum deducted from the fined person<csq/>s earnings in compliance with that order.</p>
+<p class="-3 13 0 left 1 0" just="left">(7) The employer to whom the attachment order is directed shall give to the fined person a statement in writing of the total amount of every deduction made from the person<csq/>s earnings in compliance with the order.</p>
+<p class="-3 13 0 left 1 0" just="left">(8) The employer to whom the attachment order is directed who, without reasonable excuse, fails to comply with the terms of the order shall be guilty of an offence and shall be liable, on summary conviction, to a class A fine or imprisonment for a period not exceeding 12 months, or both.</p>
+</sect>
+
+<sect id="SEC16">
+<number>16.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Notification of changes of employment and employment status</b></p>
+</title>
+<p class="-6 15 0 left 0 0" just="left"><b>16. </b> (1) (a) Where the attachment order is in force and the fined person ceases to be in the employment of the employer to whom the order is directed, the fined person shall<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) give notice in writing to the court of the change in his or her employment status within 10 working days of the change in status, and</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) subject to <i>subsection (2)</i>, inform the court in writing, as appropriate<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(I)of the name and address of his or her new employer, or</p>
+<p class="-3 21 0 left 1 0" just="left">(II)that he or she is no longer in employment.</p>
+<p class="-3 15 0 left 1 0" just="left">(b) Where the court is advised as referred to in <i>paragraph (a)(ii)</i>(I), it shall issue a new attachment order to the new employer requiring him or her to deduct the outstanding balance of the fine from the fined person<csq/>s earnings in accordance with the terms of the order and may, at the same time and in order to take account of any disruption caused to the fined person<csq/>s earnings due to his or her change of employment, in the new order increase, by such period as it considers appropriate to take account of such disruption, the maximum 12 months period referred to in <i><xref show="replace" href="SEC14" value1="14.\u2014" xml:link="simple">section 14</xref>(2)</i> otherwise applicable in respect of any such order.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Where<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the fined person advises the court that he or she is no longer in employment in accordance with <i>subsection (1)(a)(ii)</i>(II),</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the employer of the fined person to whom the attachment order is directed advises the court that the fined person has ceased to be in the employment of the employer, or</p>
+<p class="-3 15 0 left 1 0" just="left">(c) the attachment order which relates to the fined person is revoked under <i>paragraph (b)</i> of <i><xref show="replace" href="SEC14" value1="14.\u2014" xml:link="simple">section 14</xref>(4)</i>,</p>
+<p class="0 13 0 left 1 0" just="left"><i>subsection (3)</i> shall apply (unless the fined person has elected to pay the remaining balance of the fine to the court under <i><xref show="replace" href="SEC17" value1="17.\u2014" xml:link="simple">section 17</xref>(1)</i> or the court decides otherwise in the interests of justice).
+</p>
+<p class="-3 13 0 left 1 0" just="left">(3) The appropriate court official concerned shall, by notice in writing served on the fined person, require the person to appear before the court on the date and at the time specified in the notice.</p>
+<p class="-3 13 0 left 1 0" just="left">(4) A notice under <i>subsection (3)</i> shall<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) state that the court may make a community service order in respect of the fined person and also state the conditions for making such an order under section 4 of the Act of 1983,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) state that the court may commit the fined person to prison in accordance with section 2 or 2A of the Act of 1986, and</p>
+<p class="-3 15 0 left 1 0" just="left">(c) state that the fined person may be arrested if he or she fails to appear before the court as required by the notice.</p>
+<p class="-3 13 0 left 1 0" just="left">(5) Where a fined person fails, without reasonable excuse, to appear before the court as required by a notice under <i>subsection (3)</i>, the court shall, if satisfied that the notice was served on the person<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) issue a warrant for the arrest of the person, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) if the court thinks it appropriate in all the circumstances, cause a further notice under <i>subsection (3)</i> to be served on the person specifying a new date for the person to appear before the court.</p>
+<p class="-3 13 0 left 1 0" just="left">(6) A fined person arrested under <i>subsection (5)(a)</i> shall be brought before the next sitting of the court.</p>
+<p class="-3 13 0 left 1 0" just="left">(7) The court shall, at the sitting of the court on the date specified in the notice concerned under <i>subsection (3)</i> served on the fined person (unless the person has paid the fine on or before that date)<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) make a community service order in respect of the person, or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) commit the person to prison in accordance with section 2 or 2A of the Act of 1986.</p>
+</sect>
+
+<sect id="SEC17">
+<number>17.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Cesser of attachment order</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>17. </b>(1) At any time while the attachment order is in force, the fined person may elect to pay the remaining balance of the fine and, on so doing<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the order shall be deemed to have been revoked, and</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the Courts Service shall give notice in writing to the employer to whom the order is directed of such revocation.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) The attachment order shall cease to have effect<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) when the terms of the order have been complied with by the employer and all sums have been paid over to the court in accordance with the order,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) when the employer is given a notice under <i>subsection (1)</i>,</p>
+<p class="-3 15 0 left 1 0" just="left">(c) subject to <i><xref show="replace" href="SEC15" value1="15.\u2014" xml:link="simple">section 15</xref>(5)</i>, if the employer is not the fined person<csq/>s employer at the time when the service of the order is effected, or</p>
+<p class="-3 15 0 left 1 0" just="left">(d) subject to <i><xref show="replace" href="SEC15" value1="15.\u2014" xml:link="simple">section 15</xref>(6)</i> and <i>(7)</i>, when the employer to whom the order is directed ceases to be the employer of the fined person.</p>
+</sect>
+
+<sect id="SEC18">
+<number>18.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Monies recovered by attachment order</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>18. </b>(1) Subject to <i>subsection (2)</i>, monies paid into court as a result of the making of the attachment order shall be paid to the Minister for Finance and such monies shall then be paid to, or disposed of for the benefit of, the Exchequer in such manner as that Minister may direct.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Nothing in this Act shall prevent the payment of monies referred to in <i>subsection (1)</i> to a person other than the Minister for Finance under<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the Fines and Penalties (Disposal) Order 1943 (S.I. No. 115 of 1943), or</p>
+<p class="-3 15 0 left 1 0" just="left">(b) any other enactment.</p>
+</sect>
+</part>
+
+<part id="PART5"><title>
+<p class="0 0 0 center 1 0"><font size="large" smallcaps="no">PART 5</font></p>
+<p class="0 0 0 center 1 0" just="center"><font size="normal" smallcaps="yes">
+Community Service Orders and Imprisonment in Default of Payment of Fine
+</font></p></title>
+<sect id="SEC19">
+<number>19.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Community service order in default of payment of fine</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>19. </b>(1) The Act of 1983 is amended<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) in section 1, by inserting the following definitions in subsection (1) :</p>
+<p class="0 15 0 left 1 0" just="left"><odq/><osq/><i>Act of 2014</i><csq/> means the <i>Fines (Payment and Recovery) Act 2014</i>;</p>
+<p class="0 15 0 left 1 0" just="left"><osq/>attachment order<csq/> has the same meaning as it has in the <i>Act of 2014</i>;</p>
+<p class="0 15 0 left 1 0" just="left"><osq/>fine<csq/> has the same meaning as it has in section 2 (amended by <i>subparagraph (iv)</i> of <i><xref show="replace" href="SEC20" value1="20.\u2014" xml:link="simple">section 20</xref>(b)</i> of the <i>Act of 2014</i>) of the Courts (No. 2) Act 1986;</p>
+<p class="0 15 0 left 1 0" just="left"><osq/>receiver<csq/> has the same meaning as it has in the <i>Act of 2014</i>;</p>
+<p class="0 15 0 left 1 0" just="left"><osq/>recovery order<csq/> has the same meaning as it has in the <i>Act of 2014</i>;<cdq/>,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) in section 2, by inserting the following subsections:</p>
+<p class="-3 18 0 left 1 0" just="left"><odq/>(2) This Act also applies to a person (in this Act also referred to as an <osq/>offender<csq/>) who<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(a) has attained the age of 16 years, and</p>
+<p class="-3 21 0 left 1 0" just="left">(b) stands convicted of an offence in respect of which the court has imposed a fine that the offender has failed to pay by the due date for payment.</p>
+<p class="-3 18 0 left 1 0" just="left">(3) In this section <osq/>due date for payment<csq/>, in relation to a fine, has the same meaning as in the <i>Act of 2014</i>.<cdq/>,</p>
+<p class="-3 15 0 left 1 0" just="left">(c) in section 3, by<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) inserting the following subsection:</p>
+<p class="-3 21 0 left 1 0" just="left"><odq/>(1A) Where a court is satisfied that<emdash/></p>
+<p class="-3 24 0 left 1 0" just="left">(a) at a sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">section 7</xref>(4)</i> of the <i>Act of 2014</i><emdash/></p>
+<p class="-3 27 0 left 1 0" just="left">(i) an offender to whom subsection (2) of section 2 applies has failed to pay the fine imposed by it in relation to the offender by the due date for payment, and</p>
+<p class="-3 27 0 left 1 0" just="left">(ii) it would not be appropriate to make a recovery order or attachment order in respect of that offender,</p>
+<p class="-3 24 0 left 1 0" just="left">(b) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC11" value1="11.\u2014" xml:link="simple">section 11</xref>(2)</i> of the <i>Act of 2014</i>, a receiver has been unable to recover<emdash/></p>
+<p class="-3 27 0 left 1 0" just="left">(i) the fine imposed by it in relation to an offender to whom subsection (2) of section 2 applies, or</p>
+<p class="-3 27 0 left 1 0" just="left">(ii) a sum or sums from the proceeds of the sale of property belonging to that offender sufficient to pay that fine,</p>
+<p class="0 24 0 left 1 0" just="left">or</p>
+<p class="-3 24 0 left 1 0" just="left">(c) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC16" value1="16.\u2014" xml:link="simple">section 16</xref>(3)</i> of the <i>Act of 2014</i>, an attachment order made in respect of the earnings of an offender to whom subsection (2) of section 2 applies has not resulted in the collection of the fine imposed by it in relation to the offender,</p>
+<p class="0 21 0 left 1 0" just="left">and is also satisfied that, in relation to that offender, the provisions of section 4 have been complied with, it may make an order (in this Act also referred to as a <osq/>community service order<csq/>) in accordance with this section.<cdq/>,</p>
+<p class="0 18 0 left 1 0" just="left">and</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) substituting the following subsection for subsection (2):</p>
+<p class="-3 21 0 left 1 0" just="left"><odq/>(2) A community service order shall require the offender to perform, in accordance with this Act, unpaid work for such number of hours as are specified in the order, being<emdash/></p>
+<p class="-3 24 0 left 1 0" just="left">(a) in the case of an offender to whom subsection (1) of section 2 applies, not less than 40 hours and not greater than 240 hours,</p>
+<p class="-3 24 0 left 1 0" just="left">(b) in the case of an offender to whom subsection (2) of section 2 applies who was convicted on indictment of the offence concerned, not less than 40 hours and not greater than 240 hours, and</p>
+<p class="-3 24 0 left 1 0" just="left">(c) in the case of an offender to whom subsection (2) of section 2 applies who was convicted summarily of the offence concerned, not less than 30 hours and not greater than 100 hours.<cdq/>,</p>
+<p class="-3 15 0 left 1 0" just="left">(d) in section 5, by inserting the following subsections:</p>
+<p class="-3 18 0 left 1 0" just="left"><odq/>(2A) The hours of work specified in a community service order under subsection (1A) (inserted by <i><xref show="replace" href="SEC19" value1="19.\u2014" xml:link="simple">section 19</xref>(1)(c)(i)</i> of the <i>Act of 2014</i>) of section 3 shall be additional to any hours of work specified in any other community service order made in respect of the offender.</p>
+<p class="-3 18 0 left 1 0" just="left">(2B) The court shall, for the purpose of determining the number of hours of work to specify in a community service order under subsection (1A) of section 3, take account of<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(a) any sum or sums paid by the offender concerned in satisfaction of part of the fine,</p>
+<p class="-3 21 0 left 1 0" just="left">(b) any part of the fine, or any sum or sums from the proceeds of the sale of property of the offender sufficient to pay part only of that fine, recovered by a receiver, and</p>
+<p class="-3 21 0 left 1 0" just="left">(c) any part of the fine recovered as a result of an attachment order made in respect of the earnings of the offender.<cdq/>,</p>
+<p class="0 15 0 left 1 0" just="left">and</p>
+<p class="-3 15 0 left 1 0" just="left">(e) in section 7, by inserting the following subsection:</p>
+<p class="-3 18 0 left 1 0" just="left"><odq/>(6) Subsection (4) shall not apply to an offender to whom subsection (2)of section 2 applies.<cdq/>.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) Section 2 of the Act of 1983 as it stood immediately before the commencement of this section shall, immediately after such commencement, be subsection (1) of such section 2.</p>
+</sect>
+
+<sect id="SEC20">
+<number>20.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Imprisonment in default of payment of fine</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>20. </b> The Act of 1986 is amended<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) by inserting the following section:</p>
+<p class="0 18 0 left 1 0" just="left"><b><odq/>Definitions for purposes of sections 2 and 2A</b></p>
+<p class="-5 18 0 left 1 0" just="left">1A. In sections 2 and 2A<emdash/></p>
+<p class="0 21 0 left 1 0" just="left"><osq/><i>Act of 2014</i><csq/> means the <i>Fines (Payment and Recovery) Act 2014</i>;</p>
+<p class="0 21 0 left 1 0" just="left"><osq/>attachment order<csq/> has the same meaning as it has in the <i>Act of 2014</i>;</p>
+<p class="0 21 0 left 1 0" just="left"><osq/>due date for payment<csq/> has the same meaning as it has in the <i>Act of 2014</i>;</p>
+<p class="0 21 0 left 1 0" just="left"><osq/>receiver<csq/> has the same meaning as it has in the <i>Act of 2014</i>;</p>
+<p class="0 21 0 left 1 0" just="left"><osq/>recovery order<csq/> has the same meaning as it has in the <i>Act of 2014</i>.<cdq/>,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) in section 2<emdash/></p>
+<p class="-3 18 0 left 1 0" just="left">(i) by substituting the following subsection for subsection (1):</p>
+<p class="-4 21 0 left 1 0" just="left"><odq/>(1) Where a court is satisfied that<emdash/></p>
+<p class="-3 24 0 left 1 0" just="left">(a) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">section 7</xref>(4)</i> of the <i>Act of 2014</i><emdash/></p>
+<p class="-3 27 0 left 1 0" just="left">(i) a person on whom a fine has been imposed consequent upon his or her summary conviction of an offence has not paid the fine by the due date for payment, and</p>
+<p class="-3 27 0 left 1 0" just="left">(ii) it would not be appropriate to make a recovery order or attachment order in respect of that person,</p>
+<p class="-3 24 0 left 1 0" just="left">(b) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC11" value1="11.\u2014" xml:link="simple">section 11</xref>(2)</i> of the <i>Act of 2014</i>, a receiver has been unable to recover<emdash/></p>
+<p class="-3 27 0 left 1 0" just="left">(i) a fine imposed on a person consequent upon his or her summary conviction of an offence, or</p>
+<p class="-3 27 0 left 1 0" just="left">(ii) a sum or sums from the proceeds of the sale of property belonging to that person sufficient to pay that fine,</p>
+<p class="0 24 0 left 1 0" just="left">or</p>
+<p class="-3 24 0 left 1 0" just="left">(c) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC16" value1="16.\u2014" xml:link="simple">section 16</xref>(3)</i> of the <i>Act of 2014</i>, an attachment order made in respect of the earnings of a person has not resulted in the collection of a fine imposed on a person consequent upon his or her summary conviction of an offence,</p>
+<p class="0 21 0 left 0 0" just="left">and is also satisfied that, in relation to that person, the provisions of section 4 of the Criminal Justice (Community Service) Act 1983 have not been complied with, it may make an order committing the person to prison for a term not exceeding the appropriate period of imprisonment specified in the Table.<cdq/>,</p>
+<p class="-3 18 0 left 1 0" just="left">(ii) by inserting the following subsections:</p>
+<p class="-4 21 0 left 0 0" just="left"><odq/>(1A) Where a court has made a community service order within the meaning of subsection (1A) (inserted by <i><xref show="replace" href="SEC19" value1="19.\u2014" xml:link="simple">section 19</xref>(1)(c)(i)</i> of the <i>Act of 2014</i>) of section 3 of the Criminal Justice (Community Service) Act 1983 consequent upon the summary conviction of a person of an offence, it shall, if satisfied that the person in respect of whom it made the order fails to comply with a requirement specified in subsection (1)(b) of section 7 of that Act, make an order committing the person to prison for a term not exceeding the appropriate period specified in the Table.</p>
+<p class="-3 21 0 left 1 0" just="left">(1B) For the purposes of determining the appropriate period of imprisonment specified in the Table, the amount of the fine shall be the fine less<emdash/></p>
+<p class="-3 24 0 left 1 0" just="left">(a) any sum or sums paid by the person concerned in satisfaction of part of the fine,</p>
+<p class="-3 24 0 left 1 0" just="left">(b) any sum or sums recovered (whether from the proceeds of the sale of property belonging to the person or otherwise) by a receiver sufficient to pay part only of the fine, and</p>
+<p class="-3 24 0 left 1 0" just="left">(c) any part of the fine recovered as a result of an attachment order made in respect of the earnings of the person.<cdq/>,</p>
+<p class="-3 18 0 left 1 0" just="left">(iii) by deleting subsection (2),</p>
+<p class="-3 18 0 left 1 0" just="left">(iv) in subsection (4), in the definition of <odq/>fine<cdq/>, by inserting, after <odq/>ordered to be paid<cdq/>, the words <odq/>, but does not include the administration fee within the meaning of <i><xref show="replace" href="SEC2" value1="2.\u2014" xml:link="simple">section 2</xref></i> of the <i>Act of 2014</i> or the fees of, or expenses incurred by, a receiver.<cdq/>, and</p>
+<p class="-3 18 0 left 1 0" just="left">(v) by inserting the following Table:</p>
+<p class="0 0 0 center 1 0" just="left"><odq/>TABLE</p>
+<p class="0 0 0 center 1 0" just="left"><graphic href="en.act.2014.0007.0001.jpg" quality="GOOD"/></p>
+
+<p class="2 10 0 right 1 0" just="left">. <cdq/>,</p>
+<p class="0 15 0 left 1 0" just="left">and</p>
+<p class="-3 15 0 left 1 0" just="left">(c) by inserting the following section:</p>
+<p class="8 18 0 left 1 0" just="left"><b><odq/>Imprisonment on conviction on indictment in default of payment of fine</b></p>
+<p class="-5 18 0 left 1 0" just="left">2A. (1) Where a court is satisfied that<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(a) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">section 7</xref>(4)</i> of the <i>Act of 2014</i><emdash/></p>
+<p class="-3 24 0 left 1 0" just="left">(i) a person on whom a fine has been imposed consequent upon his or her conviction on indictment of an offence has not paid the fine by the due date for payment, and</p>
+<p class="-3 24 0 left 1 0" just="left">(ii) it would not be appropriate to make a recovery order or attachment order in respect of that person,</p>
+<p class="-3 21 0 left 1 0" just="left">(b) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC11" value1="11.\u2014" xml:link="simple">section 11</xref>(2)</i> of the <i>Act of 2014</i>, a receiver has been unable to recover<emdash/></p>
+<p class="-3 24 0 left 1 0" just="left">(i) a fine imposed on a person consequent upon his or her conviction on indictment of an offence, or</p>
+<p class="-3 24 0 left 1 0" just="left">(ii) a sum or sums from the proceeds of the sale of property belonging to that person sufficient to pay that fine,</p>
+<p class="0 24 0 left 1 0" just="left">or</p>
+<p class="-3 24 0 left 1 0" just="left">(c) at the sitting of the court on the date specified in the notice concerned under <i><xref show="replace" href="SEC16" value1="16.\u2014" xml:link="simple">section 16</xref>(3)</i> of the <i>Act of 2014</i>, an attachment order made in respect of the earnings of a person has not resulted in the collection of a fine imposed on a person consequent upon his or her conviction on indictment of an offence,</p>
+<p class="0 18 0 left 1 0" just="left">and the court is also satisfied that, in relation to that person, the provisions of section 4 of the Criminal Justice (Community Service) Act 1983 have not been complied with, it may make an order committing the person to prison for a term not exceeding 12 months.</p>
+<p class="-3 18 0 left 1 0" just="left">(2) Where a court has made a community service order under subsection (1A) of section 3 of the Criminal Justice (Community Service) Act 1983 consequent upon the conviction of a person on indictment of an offence, it shall, if satisfied that the person in respect of whom it made the order fails to comply with the requirement specified in subsection (1)(b) of section 7 of that Act, make an order committing the person to prison for a term not exceeding 12 months.</p>
+<p class="-3 18 0 left 1 0" just="left">(3) A court shall, for the purpose of determining the term for which a person shall be committed to prison under this section, take account of<emdash/></p>
+<p class="-3 21 0 left 1 0" just="left">(a) any sum or sums paid by the person concerned in satisfaction of part of the fine,</p>
+<p class="-3 21 0 left 1 0" just="left">(b) any sum or sums recovered (whether from the proceeds of the sale of property belonging to the person or otherwise) by a receiver sufficient to pay part only of that fine, and</p>
+<p class="-3 21 0 left 1 0" just="left">(c) any part of the fine recovered as a result of an attachment order made in respect of the earnings of the person.</p>
+<p class="-3 18 0 left 1 0" just="left">(4) In this section <osq/>fine<csq/> has the same meaning as it has in section 2 (amended by, <i>subparagraph (iv)</i> of <i><xref show="replace" href="SEC20" value1="20.\u2014" xml:link="simple">section 20</xref>(b)</i> of the <i>Act of 2014</i>).<cdq/>.</p>
+</sect>
+</part>
+
+<part id="PART6"><title>
+<p class="0 0 0 center 1 0"><font size="large" smallcaps="no">PART 6</font></p>
+<p class="0 0 0 center 1 0" just="center"><font size="normal" smallcaps="yes">
+Miscellaneous
+</font></p></title>
+<sect id="SEC21">
+<number>21.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Service of notices</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>21.</b> (1) A notice under this Act required to be served on a person shall be addressed to the person by name, and may be so served in one of the following ways:</p>
+<p class="-3 15 0 left 1 0" just="left">(a) by delivering it to the person;</p>
+<p class="-3 15 0 left 1 0" just="left">(b) by leaving it at the address at which the person ordinarily resides or, in a case in which an address for service has been furnished, at that address; or</p>
+<p class="-3 15 0 left 1 0" just="left">(c) by sending it by post to the address at which the person ordinarily resides or, in a case in which an address for service has been furnished, to the address.
+</p>
+<p class="-3 13 0 left 1 0" just="left">(2) For the purpose of this section, a company within the meaning of the Companies Acts shall be deemed to be ordinarily resident at its registered office, and every other body corporate and every unincorporated body of persons shall be deemed to be ordinarily resident at its principal office or place of business.</p>
+</sect>
+
+<sect id="SEC22">
+<number>22.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Amendment of Courts (No. 2) Act 1991</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>22.</b> The Courts (No. 2) Act 1991 is amended by inserting the following section after section 1:</p>
+<p class="0 18 0 left 1 0" just="left"><b><odq/>Restriction of operation of section 1 and of section 23 of Petty Sessions (Ireland) Act 1851</b></p>
+<p class="-3 18 0 left 1 0" just="left">1A. The operation of section 1 of this Act, and of section 23 of the Petty Sessions (Ireland) Act 1851, in so far as they relate to any penal sum referred to therein, shall, from the commencement of <i><xref show="replace" href="SEC7" value1="7.\u2014" xml:link="simple">section 7</xref></i> of the <i>Fines (Payment and Recovery) Act 2014</i>, be subject to the operation of the provisions of the <i>Fines (Payment and Recovery) Act 2014</i> in so far as those provisions relate to such penal sum, and such section 1 and such section 23 shall, with all necessary modifications, be construed accordingly.<cdq/>.</p>
+</sect>
+
+<sect id="SEC23">
+<number>23.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Data sharing and exchange</b></p>
+</title>
+<p class="-3 11 0 left 0 0" just="left"><b>23.</b> (1) Notwithstanding any enactment or rule of law, a relevant person shall, upon a request from a court, provide the court with such information in the possession or control of the relevant person as the court may reasonably require for the purpose of enabling the court to perform its functions under this Act in relation to recovery orders or attachment orders.</p>
+<p class="-3 13 0 left 1 0" just="left">(2) In this section <odq/>relevant person<cdq/> means<emdash/></p>
+<p class="-3 15 0 left 1 0" just="left">(a) the Revenue Commissioners,</p>
+<p class="-3 15 0 left 1 0" just="left">(b) the Minister for Social Protection, or</p>
+<p class="-3 15 0 left 1 0" just="left">(c) such person as may be prescribed.</p>
+</sect>
+
+<sect id="SEC24">
+<number>24.</number><title>
+<p class="2 10 0 left 1 0" just="left"><b>Application of monies where only part of fine is paid</b></p>
+</title>
+<p class="0 0 0 justify 00" just="left"></p>
+<p class="-3 11 0 left 0 0" just="left"><b>24.</b> Where monies applied towards the payment of a fine are insufficient to pay the fine in full, the monies shall be applied in the following order:</p>
+<p class="-3 15 0 left 1 0" just="left">(a) first, towards the payment of that part of the fine which is the costs referred to in the definition of <odq/>fine<cdq/> in <i><xref show="replace" href="SEC2" value1="2.\u2014" xml:link="simple">section 2</xref>(1)</i>;</p>
+<p class="-3 15 0 left 1 0" just="left">(b) second (if any monies remain), towards the payment of that part of the fine which is the compensation referred to in that definition;</p>
+<p class="-3 15 0 left 1 0" just="left">(c) third (if any monies remain), towards the payment of that part of the fine which is the expenses referred to in that definition; and</p>
+<p class="-3 15 0 left 1 0" just="left">(d) fourth (if any monies remain), towards the payment of the remainder of the fine.</p>
+</sect>
+</part>
+</body>
+</act>
