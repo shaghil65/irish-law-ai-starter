@@ -2,48 +2,63 @@
 
 **Find the provision. Understand the law.**
 
-Irish Law AI is a local-first research preview for searching imported Irish legislation and generating evidence-led answers. It combines a Next.js frontend, a FastAPI backend, PostgreSQL full-text search, pgvector, and locally hosted Ollama models. No paid AI API is required.
-
-> **Important:** This is a research preview, not legal advice. The corpus is incomplete, and enacted Acts may have been amended, repealed, or not commenced. AI answers and citations can be wrong or irrelevant. Always verify the current law using the [Irish Statute Book](https://www.irishstatutebook.ie/).
+Irish Law AI is an open-source-style, local-first legal research application for exploring Irish legislation. It combines full-text and semantic search with AI-assisted answers and supporting references to the [Irish Statute Book](https://www.irishstatutebook.ie/). The AI runs locally through Ollama, with no paid AI API required.
 
 ## Features
 
-- Responsive legal research interface with example questions and supporting evidence cards.
-- Keyword search using PostgreSQL full-text search.
-- Semantic search using locally generated embeddings.
-- Hybrid search combining lexical and semantic results.
-- AI-assisted answers using Ollama, with links to retrieved source legislation.
-- Optional Act-year filter.
+- **Modern research interface** — responsive Next.js UI with suggested questions and source cards.
+- **Keyword search** — PostgreSQL full-text search; works without an AI model.
+- **Semantic search** — meaning-based retrieval with locally generated embeddings.
+- **Hybrid search** — combines keyword and semantic rankings.
+- **AI-assisted research** — Ollama generates answers from retrieved legislative provisions.
+- **Source transparency** — view supporting excerpts and links to official legislation.
+- **Year filtering** — narrow results by Act year.
 
-**Known limitation:** Search relevance needs further work. For example, a query about *company directors' duties* has retrieved unrelated provisions about a director of a policing authority. An AI answer is **not** reliable merely because sources are displayed alongside it.
+## Tech stack
 
-## Stack
-
-| Layer | Technology |
+| Component | Technology |
 | --- | --- |
 | Frontend | Next.js, React, TypeScript |
-| API | Python, FastAPI |
-| Database | PostgreSQL, pgvector |
-| Local chat model | Ollama `llama3.2:3b` |
-| Local embedding model | Ollama `nomic-embed-text` |
-| Containers | Docker Compose |
+| Backend | FastAPI, Python |
+| Database | PostgreSQL |
+| Vector search | pgvector |
+| Local AI | Ollama (`llama3.2:3b`) |
+| Embeddings | Ollama (`nomic-embed-text`) |
+| Development environment | Docker Compose |
 
-## Local setup (current macOS configuration)
+## Getting started
 
-Install Docker Desktop and Ollama. In the project directory, create `.env` from `.env.example` **only if `.env` does not already exist**:
+### Prerequisites
+
+- Docker Desktop with Docker Compose
+- [Ollama](https://ollama.com/) installed on your computer
+- Git
+
+The commands below reflect the current macOS development configuration.
+
+### 1. Configure the project
 
 ```bash
 cp -n .env.example .env
 ```
 
-Install and start the local models:
+Set the required environment variables according to `.env.example`. Keep `.env` out of version control.
+
+### 2. Start Ollama and download the models
+
+On macOS, install Ollama if needed:
 
 ```bash
 brew install ollama
+```
+
+Start Ollama (unless it is already running):
+
+```bash
 ollama serve
 ```
 
-Keep that terminal open if you started the server manually. In another terminal:
+In a separate terminal:
 
 ```bash
 ollama pull llama3.2:3b
@@ -51,9 +66,7 @@ ollama pull nomic-embed-text
 ollama list
 ```
 
-If Ollama is already running, you do not need another `ollama serve` process.
-
-Start the current working Docker setup:
+### 3. Start the application
 
 ```bash
 docker compose \
@@ -65,11 +78,13 @@ docker compose \
   up -d --build db backend frontend
 ```
 
-Open **http://localhost:3001**. In this development setup the frontend is published on host port 3001; the backend and database communicate over Docker's internal network.
+Open **http://localhost:3001**.
 
-### Index legislation for semantic search
+The additional Compose files reflect local port adjustments: the database and backend communicate inside Docker, while the frontend is available on port `3001`.
 
-Once Ollama is reachable from the backend and legislation has been imported:
+### 4. Index legislation for semantic search
+
+Once legislation has been imported and Ollama is running:
 
 ```bash
 docker compose \
@@ -81,47 +96,63 @@ docker compose \
   exec backend python -m app.index_local_embeddings
 ```
 
-Indexing can take time on a local computer. Keyword search does not require Ollama or embeddings; semantic and hybrid modes do.
+Indexing time depends on the number of provisions and the machine running Ollama. Keyword search does not require embeddings.
+
+## Search modes
+
+| Mode | How it works | Requires Ollama? |
+| --- | --- | --- |
+| Keyword | PostgreSQL full-text matching | No |
+| Semantic | Vector similarity over indexed provisions | Yes |
+| Hybrid | Combines keyword and semantic retrieval | Yes |
+
+The research assistant uses retrieved provisions as context for its responses. The source cards make it easier to check the underlying legislation.
 
 ## API
 
-| Method | Route | Purpose |
+| Method | Endpoint | Purpose |
 | --- | --- | --- |
-| `GET` | `/api/search` | Keyword provision search |
-| `GET` | `/api/research/search` | Keyword, semantic, or hybrid retrieval |
-| `POST` | `/api/research/ask` | Local AI answer based on retrieved provisions |
+| `GET` | `/api/search` | Basic keyword search |
+| `GET` | `/api/research/search` | Keyword, semantic or hybrid search |
+| `POST` | `/api/research/ask` | AI-assisted research with sources |
 
-Example request from inside the backend container:
-
-```bash
-python - <<'PY'
-import requests
-r = requests.get('http://localhost:8000/api/research/search', params={'q':'company directors','mode':'keyword','limit':5}, timeout=30)
-print(r.status_code)
-print(r.json())
-PY
-```
-
-## Data coverage and verification
-
-At a previously reported development checkpoint, the local database contained **49 Acts and 3,496 provisions**. This is a historical development snapshot, not a live count or comprehensive coverage of Irish law. The imported material was primarily 2024 enacted legislation; principal Acts relevant to a question may be absent.
-
-Source links currently may lead to an Act rather than the precise provision. Always inspect the original text and check amendments, commencement, and current legal status.
-
-**Preserve your data:** Do **not** run `docker compose down -v`; removing volumes can destroy the PostgreSQL database. Use `docker compose stop` with the same five Compose files to stop services without deleting volumes.
-
-## Troubleshooting
-
-**Ollama unavailable:**
+Example request from within the backend container or its Docker network:
 
 ```bash
-ollama list
-curl http://localhost:11434/api/tags
+curl 'http://localhost:8000/api/research/search?q=employment&mode=keyword&limit=5'
 ```
 
-On Docker Desktop for Mac, the backend typically connects to the host Ollama service at `http://host.docker.internal:11434`.
+## Repository layout
 
-**Check container status:**
+```text
+irish-law-ai-starter/
+├── backend/
+│   ├── app/                 # FastAPI routes, retrieval and AI research
+│   ├── ingest/              # Legislation ingestion tools
+│   └── tests/
+├── frontend/
+│   └── app/                 # Next.js application and styles
+├── database/
+│   └── init/                # Database initialization
+├── data/                    # Local legislation inputs and reports
+├── docker-compose.yml
+├── docker-compose.free.yml
+├── docker-compose.portfix.yml
+├── docker-compose.backendfix.yml
+├── docker-compose.frontendfix.yml
+├── .env.example
+└── README.md
+```
+
+## Development status
+
+The application currently supports a working local web interface, legislation search, Ollama-based research responses and source evidence cards. At the last reported checkpoint, the development database contained **49 imported Acts and 3,496 provisions**; this is a snapshot, not a complete collection of Irish law.
+
+Planned improvements include expanding coverage to principal Acts, improving retrieval and relevance checks, more precise section links, automated evaluation, and simplifying the Docker configuration.
+
+## Useful commands
+
+Check running containers:
 
 ```bash
 docker compose \
@@ -133,27 +164,28 @@ docker compose \
   ps
 ```
 
-**Irrelevant answers:** Inspect retrieved provisions first. Hybrid reciprocal-rank fusion does not guarantee legal relevance, and semantic distance thresholds are experimental. If the corpus lacks the relevant legislation, do not treat the answer as authoritative.
-
-## Optional temporary public demo
-
-A Cloudflare Quick Tunnel can expose the locally running frontend while your Mac stays online:
+Check Ollama:
 
 ```bash
-brew install cloudflared
-cloudflared tunnel --url http://localhost:3001
+curl http://localhost:11434/api/tags
 ```
 
-This is a **temporary demonstration**, not production hosting. Before sharing publicly, review authentication, rate limits, abuse prevention, resource limits, and security. Do not expose the database or Ollama service directly.
+Stop containers without removing database volumes:
 
-## Roadmap
+```bash
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.free.yml \
+  -f docker-compose.portfix.yml \
+  -f docker-compose.backendfix.yml \
+  -f docker-compose.frontendfix.yml \
+  stop
+```
 
-- Import more principal Acts and track their current legal status.
-- Improve legal-topic retrieval, reranking, and evidence sufficiency checks.
-- Add section-specific source links and automated legal-relevance tests.
-- Consolidate the local Compose overrides.
-- Add security controls before public launch.
+## Legal information note
 
-## License
+Irish Law AI is a research tool, not legal advice. Its corpus is incomplete, and retrieved provisions or AI-generated answers may be inaccurate or out of date. Verify the current law against the [Irish Statute Book](https://www.irishstatutebook.ie/).
 
-No license has yet been specified. Do not assume the repository is open-source licensed until one is added.
+---
+
+**Irish Law AI** · Local-first Irish legislation research
