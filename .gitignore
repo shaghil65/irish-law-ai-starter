@@ -9,3 +9,104 @@ node_modules/
 out/
 dist/
 *.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Next.js / Node.js
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS / editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+.cache/
+tmp/
+
+# Local databases and data exports
+*.sqlite
+*.sqlite3
+*.db
+*.sql.gz
+*.dump
+
+# Local model files
+*.gguf
+*.safetensors
+
+# Generated backups and downloaded ZIPs
+stage45-backup-*/
+free-deploy-backup-*/
+ui-upgrade-backup-*/
+*.zip
+
+# Additional environment and secret files
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# Python tooling
+.mypy_cache/
+.ruff_cache/
+
+# Editor and build artifacts
+.idea/
+*.swp
+*.tsbuildinfo
+coverage/
+.cache/
+tmp/
+
+# Local database exports and AI models
+*.sqlite
+*.sqlite3
+*.db
+*.sql.gz
+*.dump
+*.gguf
+*.safetensors
+
+# Historical installer packages and backups
+stage3/
+stage45/
+free-deploy/
+ui-upgrade/
+stage3-backup/
+stage45-backup-*/
+free-deploy-backup-*/
+ui-upgrade-backup-*/
+backend/ingest.backup/
+backend/ingest.before-stage25/
+*.backup
+*.save
+*.zip

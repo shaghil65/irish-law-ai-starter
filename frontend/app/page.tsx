@@ -3,40 +3,51 @@ import { useState } from "react";
 
 type Hit = {id:number; kind:string; provision_number:string|null; heading:string|null; excerpt:string; title:string; act_year:number; act_number:number; source_version:string; source_url:string; canonical_uri:string; score:number};
 type Source = {number:number; title:string; act_year:number; provision_number:string|null; heading:string|null; url:string; excerpt:string};
-const API = "";
-export default function Home() {
- const [q,setQ]=useState(""); const [year,setYear]=useState(""); const [mode,setMode]=useState("keyword");
- const [results,setResults]=useState<Hit[]|null>(null); const [answer,setAnswer]=useState<string|null>(null);
- const [sources,setSources]=useState<Source[]>([]); const [busy,setBusy]=useState(false); const [error,setError]=useState("");
- async function run(ask:boolean) {
-  if(q.trim().length<2) return; setBusy(true); setError(""); setAnswer(null); setSources([]); setResults(null);
-  try {
+type Mode = "keyword"|"hybrid"|"semantic";
+const suggestions = ["What does Irish law say about family courts?", "What are the duties of company directors?", "What legislation governs employment rights?"];
+const modes:{id:Mode;name:string;detail:string}[] = [
+ {id:"keyword",name:"Keyword",detail:"Fast · no AI required"},
+ {id:"hybrid",name:"Hybrid",detail:"Words + meaning"},
+ {id:"semantic",name:"Semantic",detail:"Meaning-based search"}
+];
+function Icon({name}:{name:"search"|"spark"|"arrow"|"book"|"external"|"copy"|"check"}){
+ const common={width:18,height:18,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:1.8,strokeLinecap:"round" as const,strokeLinejoin:"round" as const,"aria-hidden":true as const};
+ const paths={search:<><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></>,spark:<><path d="m12 3 1.8 6.2L20 11l-6.2 1.8L12 19l-1.8-6.2L4 11l6.2-1.8L12 3Z"/><path d="m19 18 .5 1.5L21 20l-1.5.5L19 22l-.5-1.5L17 20l1.5-.5L19 18Z"/></>,arrow:<><path d="M5 12h14m-6-6 6 6-6 6"/></>,book:<><path d="M12 7c-3-2-6-2-9-1v13c3-1 6-1 9 1 3-2 6-2 9-1V6c-3-1-6-1-9 1Zm0 0v13"/></>,external:<><path d="M13 5h6v6m0-6-9 9"/><path d="M19 13v6H5V5h6"/></>,copy:<><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></>,check:<path d="m5 12 4 4L19 6"/>};
+ return <svg {...common}>{paths[name]}</svg>;
+}
+export default function Home(){
+ const [q,setQ]=useState("");const [year,setYear]=useState("");const [mode,setMode]=useState<Mode>("keyword");
+ const [results,setResults]=useState<Hit[]|null>(null);const [answer,setAnswer]=useState<string|null>(null);const [sources,setSources]=useState<Source[]>([]);
+ const [busy,setBusy]=useState(false);const [error,setError]=useState("");const [copied,setCopied]=useState(false);
+ async function run(ask:boolean,query=q){
+  if(query.trim().length<2||busy)return;setQ(query);setBusy(true);setError("");setAnswer(null);setSources([]);setResults(null);
+  try{
    let response:Response;
-   if(ask) response=await fetch(`${API}/api/research/ask`, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q.trim(),mode,year:year?Number(year):null})});
-   else {const params=new URLSearchParams({q:q.trim(),mode,limit:"20"});if(year)params.set("year",year);response=await fetch(`${API}/api/research/search?${params}`);}
-   const payload=await response.json(); if(!response.ok) throw new Error(payload.detail||`HTTP ${response.status}`);
-   if(ask){setAnswer(payload.answer);setSources(payload.sources||[]);}else setResults(payload.results||[]);
+   if(ask)response=await fetch("/api/research/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:query.trim(),mode,year:year?Number(year):null})});
+   else{const params=new URLSearchParams({q:query.trim(),mode,limit:"20"});if(year)params.set("year",year);response=await fetch(`/api/research/search?${params}`);}
+   const payload=await response.json();if(!response.ok)throw new Error(typeof payload.detail==="string"?payload.detail:`HTTP ${response.status}`);
+   if(ask){setAnswer(payload.answer||"No answer was returned.");setSources(payload.sources||[]);}else setResults(payload.results||[]);
   }catch(e){setError(e instanceof Error?e.message:"Request failed");}finally{setBusy(false);}
  }
- return <main className="searchShell">
-  <header className="searchHeader"><span className="brand"><span className="brandMark">§</span> Irish Law AI</span><span className="topTag">LOCAL AI · FREE DEPLOYMENT</span></header>
-  <section className="searchHero"><p className="eyebrow">IRISH LEGISLATION RESEARCH</p><h1>Find the law.<br/><em>Check the source.</em></h1>
-   <p className="intro">Keyword and semantic retrieval over imported Irish Acts, with evidence-grounded AI research answers.</p>
-   <form className="searchForm" onSubmit={e=>{e.preventDefault();void run(false);}}>
-    <label className="miniLabel" htmlFor="legalQuery">SEARCH LEGISLATION</label>
-    <div className="searchControls"><input id="legalQuery" value={q} onChange={e=>setQ(e.target.value)} minLength={2} maxLength={300} placeholder="e.g. family court jurisdiction" required/>
-     <input aria-label="Filter by Act year" type="number" min="1922" max="2100" placeholder="Year" value={year} onChange={e=>setYear(e.target.value)}/>
-     <button type="submit" disabled={busy||q.trim().length<2}>{busy?"Working…":"Search"}</button></div>
-    <div className="researchOptions"><label htmlFor="searchMode">Search mode</label><select id="searchMode" value={mode} onChange={e=>setMode(e.target.value)}><option value="keyword">Keyword (offline)</option><option value="hybrid">Hybrid (keyword + semantic)</option><option value="semantic">Semantic (meaning-based)</option></select>
-     <button type="button" disabled={busy||q.trim().length<5} onClick={()=>void run(true)}>Ask AI with citations</button></div>
-   </form><p className="legalNotice">Research preview · Enacted legislation only. Provisions may be amended, repealed or not commenced. Not legal advice. AI answers may be inaccurate; verify all citations.</p>
+ async function copyAnswer(){if(!answer)return;try{await navigator.clipboard.writeText(answer);setCopied(true);setTimeout(()=>setCopied(false),1800);}catch{setError("Copy unavailable in this browser.");}}
+ return <div className="lawApp"><div className="lawGlow" aria-hidden="true"/>
+  <header className="lawNav"><div className="lawNavInner"><a className="lawLogo" href="/" aria-label="Irish Law AI home"><span className="lawLogoSymbol">§</span><span>Irish Law <b>AI</b></span></a><div className="lawNavRight"><span className="lawLive"><i/> LOCAL-FIRST RESEARCH</span><span className="lawNavDivider"/><span className="lawNavNote">Irish legislation · Research preview</span></div></div></header>
+  <main className="lawMain"><section className="lawHero"><div className="lawKicker"><span className="lawKickerLine"/> THE LAW, MADE SEARCHABLE <span className="lawKickerLine"/></div><h1>Find the provision.<br/><em>Understand the law.</em></h1><p className="lawSub">Explore Irish legislation with precise search, AI-assisted research, and direct links to the original Acts. Evidence first, always.</p>
+   <div className="lawWorkspace"><div className="lawWorkspaceTop"><div className="lawWorkspaceTitle"><span className="lawWorkspaceIcon"><Icon name="book"/></span><div><strong>Legal research assistant</strong><small>Search your imported Irish legislation</small></div></div><span className="lawWorkspaceTag">ENACTED ACTS</span></div>
+    <form onSubmit={e=>{e.preventDefault();void run(false);}}><label htmlFor="lawQuestion" className="lawFieldLabel">YOUR LEGAL QUESTION</label><textarea id="lawQuestion" value={q} onChange={e=>setQ(e.target.value)} maxLength={300} minLength={2} placeholder="Ask a question or search for a legal provision…" rows={3} required onKeyDown={e=>{if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){e.preventDefault();void run(false);}}}/>
+     <div className="lawOptions"><div className="lawModes" role="group" aria-label="Search mode">{modes.map(m=><button key={m.id} type="button" className={`lawMode ${mode===m.id?"active":""}`} onClick={()=>setMode(m.id)} aria-pressed={mode===m.id}><span>{m.name}</span></button>)}</div><label className="lawYear"><span>Act year</span><input aria-label="Filter by Act year" type="number" min="1922" max="2100" placeholder="All years" value={year} onChange={e=>setYear(e.target.value)}/></label></div>
+     <p className="lawModeDescription">{modes.find(m=>m.id===mode)?.detail}{mode!=="keyword"?" · Requires Ollama and indexed embeddings":" · Works without Ollama"}</p>
+     <div className="lawActions"><span className="lawHint">⌘ + Enter to search</span><div className="lawButtons"><button type="submit" className="lawSearchButton" disabled={busy||q.trim().length<2}><Icon name="search"/>{busy?"Researching…":"Search provisions"}</button><button type="button" className="lawAskButton" disabled={busy||q.trim().length<5} onClick={()=>void run(true)}><Icon name="spark"/>Ask AI <Icon name="arrow"/></button></div></div>
+    </form></div>
+   <div className="lawTry"><span>TRY A QUESTION</span><div className="lawChips">{suggestions.map(s=><button type="button" key={s} onClick={()=>{setQ(s);void run(false,s);}} disabled={busy}>{s}<Icon name="arrow"/></button>)}</div></div>
   </section>
-  {error&&<p role="alert" className="searchError">{error}</p>}
-  {results&&<section className="searchResults" aria-live="polite"><h2>{results.length} retrieved provisions</h2>{results.length===0&&<p>No matches in the imported corpus. Try broader terms or another mode.</p>}
-   {results.map(r=><article className="resultCard" key={r.id}><p className="resultMeta">{r.act_year} · Act No. {r.act_number} · {r.source_version}</p><h3>{r.title}</h3><p className="resultHeading">{r.kind} {r.provision_number} {r.heading?`— ${r.heading}`:""}</p><p className="resultExcerpt">{r.excerpt}…</p><a href={r.canonical_uri} target="_blank" rel="noopener noreferrer">Official enacted Act ↗</a></article>)}
+  {error&&<div role="alert" className="lawError"><strong>Something needs attention</strong><p>{error}</p>{error.toLowerCase().includes("ollama")&&<small>Make sure Ollama is running and the local models are downloaded. Keyword mode can work without Ollama.</small>}</div>}
+  {busy&&<div className="lawLoading" role="status"><span className="lawSpinner"/>Retrieving legislation and preparing results…</div>}
+  {results&&<section className="lawResults" aria-live="polite"><div className="lawSectionHeader"><div><span className="lawSectionEyebrow">RESEARCH RESULTS</span><h2>{results.length} provisions found</h2></div><span className="lawResultPill">{mode.toUpperCase()} SEARCH</span></div>{results.length===0&&<div className="lawEmpty">No matching provisions in the imported corpus. Try a broader query or a different search mode.</div>}
+   <div className="lawResultList">{results.map((r,i)=><article className="lawResultCard" key={r.id}><div className="lawCardTop"><span className="lawCardIndex">{String(i+1).padStart(2,"0")}</span><span className="lawCardMeta">{r.act_year} · ACT NO. {r.act_number}</span></div><h3>{r.title}</h3><div className="lawProvision"><span>§ {r.provision_number||r.kind}</span>{r.heading&&<strong>{r.heading}</strong>}</div><p className="lawExcerpt">{r.excerpt}</p><div className="lawCardFooter"><span>Source: {r.source_version||"Enacted legislation"}</span><a href={r.canonical_uri||r.source_url} target="_blank" rel="noopener noreferrer">View original Act <Icon name="external"/></a></div></article>)}</div>
   </section>}
-  {answer!==null&&<section className="searchResults" aria-live="polite"><h2>AI research answer</h2><article className="resultCard"><p className="aiAnswer">{answer}</p><p className="legalNotice">Citation numbers refer to the evidence list below. Verify against official sources.</p></article><h2>Evidence cited / retrieved</h2>
-   {sources.map(s=><article className="resultCard" key={s.number}><p className="resultMeta">[{s.number}] {s.act_year}</p><h3>{s.title}</h3><p className="resultHeading">Section {s.provision_number} {s.heading}</p><p className="resultExcerpt">{s.excerpt}…</p><a href={s.url} target="_blank" rel="noopener noreferrer">Official enacted Act ↗</a></article>)}
-  </section>}
- </main>;
+  {answer!==null&&<section className="lawResults" aria-live="polite"><div className="lawSectionHeader"><div><span className="lawSectionEyebrow">AI-ASSISTED RESEARCH</span><h2>Your research answer</h2></div><span className="lawResultPill">{sources.length} SOURCES</span></div><article className="lawAnswerCard"><div className="lawAnswerTop"><span><Icon name="spark"/> GROUNDED RESPONSE</span><button type="button" onClick={()=>void copyAnswer()}><Icon name={copied?"check":"copy"}/>{copied?"Copied":"Copy answer"}</button></div><div className="lawAnswerBody">{answer}</div><p className="lawAnswerCaution">AI can make mistakes. Check every cited provision and its current legal status before relying on this answer.</p></article><div className="lawEvidenceHeader"><span className="lawSectionEyebrow">SUPPORTING EVIDENCE</span><h2>Retrieved provisions</h2></div><div className="lawResultList">{sources.map(s=><article className="lawResultCard" key={s.number}><div className="lawCardTop"><span className="lawCardIndex">{String(s.number).padStart(2,"0")}</span><span className="lawCardMeta">{s.act_year} · EVIDENCE</span></div><h3>{s.title}</h3><div className="lawProvision"><span>§ {s.provision_number||"—"}</span>{s.heading&&<strong>{s.heading}</strong>}</div><p className="lawExcerpt">{s.excerpt}</p><div className="lawCardFooter"><span>Official legislation</span><a href={s.url} target="_blank" rel="noopener noreferrer">View source <Icon name="external"/></a></div></article>)}</div></section>}
+  <section className="lawFeatures"><div><span className="lawFeatureIcon">01</span><strong>Source-led answers</strong><p>Original provisions accompany AI research, so you can verify the law yourself.</p></div><div><span className="lawFeatureIcon">02</span><strong>Three search modes</strong><p>Use exact keywords, meaning-based retrieval, or a combination of both.</p></div><div><span className="lawFeatureIcon">03</span><strong>Local-first AI</strong><p>Run the AI models on your own Mac with Ollama and no paid API calls.</p></div></section>
+  </main><footer className="lawFooter"><div><span className="lawFooterBrand">§ Irish Law AI</span><span>Built for transparent legal research.</span></div><p>Research preview · Imported enacted Acts may be amended, repealed, or not commenced. Not legal advice.</p></footer>
+ </div>;
 }
